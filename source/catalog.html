@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jewellery | CH</title>
+    <link rel="preload" href="fonts/poppins-latin-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-latin-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-latin-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-latin-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-latin-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-latin-italic-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  </head>
+  <body class="page-body">
+
+    <!-- header -->
+
+    <header class="header header--open">
+
+      <div class="header__top">
+        <button type="button" class="header__menu-button">Open menu</button>
+        <div class="header__top-wrapper">
+          <div class="header__search">
+            <label for="main-search">
+              <input type="text" id="main-search" placeholder="Type here to search">
+            </label>
+          </div>
+          <a href="#" class="header__logo">
+            <img src="img/logo-brown.svg" width="66" height="66" alt="Logotype Jewellery">
+          </a>
+          <div class="header__login-cart">
+            <a href="#" class="header__login">Login</a>
+            <a href="#" class="header__cart">
+              <p>Cart</p>
+              <span class="header__cart-volume">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- menu -->
+
+      <div class="header__menu-wrapper">
+        <nav class="header__menu">
+          <ul>
+            <li><a href="#">What’s new</a></li>
+            <li><a href="#">Chokers</a></li>
+            <li><a href="#">Necklaces</a></li>
+            <li><a href="#">Rings</a></li>
+            <li><a href="#">Earrings</a></li>
+          </ul>
+        </nav>
+        <div class="header__side-menu">
+          <ul>
+            <li><a href="#">About CH</a></li>
+            <li><a href="#">Stores & Hours</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- main -->
+
+    <main class="main">
+
+        <h1 class="visibility-hidden">Jewellery store</h1>
+
+        <!-- top-catalog -->
+
+        <section class="top-catalog">
+            <h2>All jewellery</h2>
+            <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+        </section>
+
+        <!-- filter-accordeon -->
+
+        <div class="filter">
+            <button type="button">Filter</button>
+            <form action="" method="POST" class="filter__form">
+                <button type="button">Close</button>
+                <div class="form__accordeon">
+                    <fieldset>
+
+                        <legend>Product</legend>
+                        <button type="button">Open accordeon</button>
+    
+                        <div class="filter__block">
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Necklaces</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Chokers</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox">
+                                <p>Rings</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Earrings</p>
+                            </label>
+                        </div>
+    
+                    </fieldset>
+    
+                    <fieldset>
+    
+                        <legend>Material</legend>
+                        <button type="button">Open accordeon</button>
+    
+                        <div class="filter__block">
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Necklaces</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Chokers</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox">
+                                <p>Rings</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Earrings</p>
+                            </label>
+                        </div>
+                        
+                    </fieldset>
+    
+                    <fieldset>
+    
+                        <legend>Collection</legend>
+                        <button type="button">Open accordeon</button>
+    
+                        <div class="filter__block">
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Necklaces</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Chokers</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox">
+                                <p>Rings</p>
+                            </label>
+                            <label for="">
+                                <input type="checkbox" checked>
+                                <p>Earrings</p>
+                            </label>
+                        </div>
+                        
+                    </fieldset>
+                    <fieldset>
+    
+                        <legend>Price</legend>
+                        
+                        <div class="filter__block">
+    
+                            <div class="filter__range">
+                                <label for="range-min">
+                                    <input value="55" min="0" max="200" step="5" type="range" id="range-min">
+                                </label>
+                                <label for="range-max">
+                                    <input value="155" min="0" max="200" step="5" type="range" id="range-max">
+                                </label>
+                            </div>
+    
+                            <div class="filter__range-value">
+                                <label for="min">
+                                    <span>$</span>
+                                    <input type="number" id="min" value="55" min="0" max="200"/>
+                                </label>
+                                <label for="max">
+                                    <span>$</span>
+                                    <input type="number" id="max" value="55" min="0" max="200"/>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <button type="submit">Apply</button>
+                <button type="reset">Clear All</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+
+        <div class="footer__call-back">
+          <p>The good stuff in your inbox </p>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <label for="footer-email">
+            <input type="email" id="footer-email" placeholder="Your E-mail">
+            <button type="submit">Sign Up</button>
+          </label>
+        </div>
+
+        <div class="footer__menu">
+          <ul>
+            <li><a href="#">Ordering & Payment</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">About CH</a></li>
+            <li><a href="#">Stores & Hours</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <ul>
+            <li class="footer__social-item footer__social-item--facebook"><a href="#">Facebook</a></li>
+            <li class="footer__social-item footer__social-item--instagram"><a href="#">Instagram</a></li>
+            <li class="footer__social-item footer__social-item--pinterest"><a href="#">Pinterest</a></li>
+            <li class="footer__social-item footer__social-item--twitter"><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+    <!-- scripts -->
+
+    <script src="js/main.js"></script>
+</html>

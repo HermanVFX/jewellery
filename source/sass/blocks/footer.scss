@@ -1,0 +1,186 @@
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 100px;
+
+    a {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+.footer__wrapper {
+    padding-left: 98px;
+    padding-right: 98px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__call-back {
+    p:first-child {
+        font-family: Cormorant Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 130%;
+        letter-spacing: 0.03em;
+        margin: 0;
+    }
+    p:not(:first-child) {
+        font-size: 16px;
+        line-height: 130%;
+        color: #9B9997;
+        margin-top: 15px;
+    }
+
+    input {
+        width: 80%;
+        background-color: transparent;
+        border-bottom: 1px solid #FFFFFF;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        padding-bottom: 15px;
+        padding-right: 20%;
+    }
+
+    label {
+        position: relative;
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+        background-color: transparent;
+        border: none;
+        padding-right: 41px;
+
+        &::after {
+            position: absolute;
+            width: 29px;
+            height: 9px;
+            content: "";
+            background-image: url(../img/right-white.svg);
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.footer__menu {
+    ul {
+        padding: 0;
+        column-count: 2;
+        column-gap: 67px;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+}
+
+.footer__social {
+    li {
+        padding-left: 15px;
+        margin-bottom: 30px;
+    }
+}
+.footer__social-item {
+    &--facebook {
+        list-style: url(../img/icon-facebook-white.svg);
+    }
+    &--instagram {
+        list-style: url(../img/icon-instagram-white.svg);
+    }
+    &--pinterest {
+        list-style: url(../img/icon-pinterest-white.svg);
+    }
+    &--twitter {
+        list-style: url(../img/icon-twitter-white.svg);
+    }
+}
+
+@media (max-width: 1023px) {
+    .footer__wrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding-top: 60px;
+    }
+    .footer__wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer__call-back {
+        p {
+            width: 80%;
+        }
+    }
+    .footer__menu {
+        ul {
+            column-count: 1;
+        }
+        li {
+            margin-bottom: 30px;
+            &:nth-child(4n) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .footer__social {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5, min-content);
+            column-gap: 30px;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            font-size: 0;
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .footer__social-item {
+        &--facebook a {
+            width: 12px;
+            height: 21px;
+            background-image: url(../img/icon-facebook-white.svg);
+        }
+        &--instagram a {
+            width: 20px;
+            height: 21px;
+            background-image: url(../img/icon-instagram-white.svg);
+        }
+        &--pinterest a {
+            width: 20px;
+            height: 21px;
+            background-image: url(../img/icon-pinterest-white.svg);
+        }
+        &--twitter a {
+            width: 20px;
+            height: 21px;
+            background-image: url(../img/icon-twitter-white.svg);
+        }
+    }
+}

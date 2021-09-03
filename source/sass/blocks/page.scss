@@ -1,0 +1,15 @@
+.page {
+    font-style: normal;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .page-body {
+    font-family: Poppins;
+    font-style: normal;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }

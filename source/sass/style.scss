@@ -1,0 +1,18 @@
+@import "global/fonts.scss";
+
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+
+.menu-js {
+    position: fixed;
+    min-height: 100vh;
+    overflow: auto;
+    overflow-y: scroll;
+    width: 100%;
+    z-index: 4;
+}
+
+.overflow {
+    overflow: hidden;
+}
