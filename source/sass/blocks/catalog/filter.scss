@@ -1,0 +1,299 @@
+.filter {
+    width: 250px;
+}
+.filter__open-btn,
+.filter__close-btn {
+    visibility: hidden;
+    border: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    padding: 0;
+}
+
+.filter__form {
+    fieldset {
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: #A87B62;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    fieldset:last-child {
+        border-width: 1px 1px 1px 1px;
+    }
+
+    label {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.form__accordeon {
+    margin-bottom: 35px;
+    .close-accordeon {
+        &::after {
+            transform: rotate(0deg);
+        }
+    }
+    button {
+        width: 100%;
+        height: 68px;
+        text-align: left;
+        padding-left: 25px;
+        background-color: transparent;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: #1D1613;
+        position: relative;
+
+        
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 8px;
+            background-image: url(../img/accordeon.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            right: 25px;
+            top: 30px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.filter__block {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 29px;
+
+    &--range {
+        padding: 0;
+    }
+
+    label:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    p {
+        margin-left: 10px;
+    }
+}
+
+.filter__range-slider {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.filter__range-value {
+    width: 200px;
+    position: relative;
+    margin-top: 16px;
+
+    label {
+        position: absolute;
+    }
+    input {
+        width: 23px;
+        border: none;
+    }
+}
+
+.filter__range-value-min {
+    left:45px;
+}
+
+.filter__range-value-max {
+    left: 135px;
+}
+// range
+.filter__range-min,
+.filter__range-max {
+    background-color: #F0EAE4;
+    width: 200px;
+    height: 1px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+}
+.filter__range-progress {
+    background-color: #A87B62;
+    width: 200px;
+    height: 1px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    z-index: 5;
+    display: block;
+    pointer-events: none;
+}
+.filter__range-slider {
+    position: relative;
+    width: 200px;
+    height: 65px;
+    float: left;
+    text-align: center;
+
+    input[type=range] {
+        pointer-events: none;
+        position: absolute;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        overflow: hidden;
+        left: 0;
+        top: -7.5px;
+        width: 200px;
+        outline: none;
+        height: 15px;
+        margin: 0;
+        padding: 0;
+
+        &::-webkit-slider-thumb {
+        pointer-events: all;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        outline: 0;
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border: none;
+        border-radius: 50%;
+        background-color: #A87B62;
+    }
+        &::-moz-range-thumb {
+            pointer-events: all;
+            position: relative;
+            cursor: pointer;
+            z-index: 10;
+            -moz-appearance: none;
+            width: 15px;
+            height: 15px;
+            border: none;
+            border-radius: 50%;
+            background-color: #A87B62;
+        }
+        &::-ms-thumb {
+            pointer-events: all;
+            position: relative;
+            z-index: 10;
+            -ms-appearance: none;
+            width: 15px;
+            height: 15px;
+            border: none;
+            border-radius: 50%;
+            background-color: #A87B62;
+        }
+        &::-moz-range-track {
+            position: relative;
+            z-index: -1;
+            background-color: black;
+            border: 0;
+        }
+        &:last-of-type::-moz-range-track {
+            -moz-appearance: none;
+            background: none transparent;
+            border: 0;
+        }
+        &::-moz-focus-outer {
+            border: 0;
+        }
+    }
+}
+
+.form__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    width: 100%;
+    height: 68px;
+    margin-bottom: 25px;
+    border: 1px solid #A87B62;
+
+    &--submit {
+        color: #ffffff;
+        background-color: #A87B62;
+    }
+    &--reset {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 1023px) {
+    .filter {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .form__overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+    }
+ .filter__open-btn {
+    width: 100%;
+    height: 68px;
+    visibility: visible;
+    background-color: #A87B62;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+    }
+    .filter__form {
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        background-color: #ffffffa6;
+        width: 100vw;
+        min-height: 100hv;
+        fieldset {
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: #A87B62;
+            padding: 0;
+            width: 100%;
+            margin: 0;
+        }
+    
+        fieldset:last-child {
+            border-width: 0;
+        }
+    }
+    .form__wrapper {
+        box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+        background-color: #ffffff;
+        width: 270px;
+        margin: 76px auto 60px auto;
+        position: relative;
+        z-index: 6;
+
+    }
+    .filter__close-btn {
+        position: absolute;
+        right: -10px;
+        top: -16px;
+        width: 32px;
+        height: 32px;
+        visibility: visible;
+        background-image: url(../img/close-filter.svg);
+        background-color: transparent;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

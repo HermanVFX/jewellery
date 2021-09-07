@@ -1,0 +1,25 @@
+.top-catalog {
+    width: 100vw;
+    background-color: #A87B62;
+    color: #ffffff;
+    font-family: Cormorant Garamond;
+    text-align: center;
+    padding-top: 102px;
+    padding-bottom: 102px;
+    line-height: 130%;
+    background-image: url(../img/top-catalog-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+        font-weight: bold;
+        font-size: 34px;
+    }
+
+    p {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 22px;
+    }
+}

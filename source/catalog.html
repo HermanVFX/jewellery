@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jewellery | CH</title>
-    <link rel="preload" href="fonts/poppins-latin-400.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/poppins-latin-500.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-latin-400.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-latin-600.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-latin-700.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-latin-italic-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-italic-400.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body class="page-body">
@@ -75,122 +75,246 @@
             <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
         </section>
 
-        <!-- filter-accordeon -->
+        <div class="catalog-wrapper">
 
-        <div class="filter">
-            <button type="button">Filter</button>
-            <form action="" method="POST" class="filter__form">
-                <button type="button">Close</button>
-                <div class="form__accordeon">
-                    <fieldset>
+          <!-- filter-accordeon -->
 
-                        <legend>Product</legend>
-                        <button type="button">Open accordeon</button>
-    
-                        <div class="filter__block">
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Necklaces</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Chokers</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox">
-                                <p>Rings</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Earrings</p>
-                            </label>
-                        </div>
-    
-                    </fieldset>
-    
-                    <fieldset>
-    
-                        <legend>Material</legend>
-                        <button type="button">Open accordeon</button>
-    
-                        <div class="filter__block">
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Necklaces</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Chokers</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox">
-                                <p>Rings</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Earrings</p>
-                            </label>
-                        </div>
-                        
-                    </fieldset>
-    
-                    <fieldset>
-    
-                        <legend>Collection</legend>
-                        <button type="button">Open accordeon</button>
-    
-                        <div class="filter__block">
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Necklaces</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Chokers</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox">
-                                <p>Rings</p>
-                            </label>
-                            <label for="">
-                                <input type="checkbox" checked>
-                                <p>Earrings</p>
-                            </label>
-                        </div>
-                        
-                    </fieldset>
-                    <fieldset>
-    
-                        <legend>Price</legend>
-                        
-                        <div class="filter__block">
-    
-                            <div class="filter__range">
-                                <label for="range-min">
+          <div class="catalog-wrapper__filter filter">
+            <button class="filter__open-btn" type="button">Filter</button>
+            <form action="" method="POST" class="filter__form tablet-hidden">
+                <div class="form__overlay"></div>
+                <div class="form__wrapper">
+                  <button class="filter__close-btn" type="button">Close</button>
+                  <div class="form__accordeon">
+                      <fieldset>
+
+                          <legend class="visibility-hidden">Product</legend>
+                          <button class="filter__btn-product" type="button">Product</button>
+
+                          <div class="filter__block filter__block--product">
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Necklaces</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Chokers</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox">
+                                  <p>Rings</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Earrings</p>
+                              </label>
+                          </div>
+
+                      </fieldset>
+
+                      <fieldset>
+
+                          <legend class="visibility-hidden">Material</legend>
+                          <button class="filter__btn-material" type="button">Material</button>
+
+                          <div class="filter__block filter__block--material">
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Necklaces</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Chokers</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox">
+                                  <p>Rings</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Earrings</p>
+                              </label>
+                          </div>
+                          
+                      </fieldset>
+
+                      <fieldset>
+
+                          <legend class="visibility-hidden">Collection</legend>
+                          <button class="filter__btn-collection" type="button">Collection</button>
+
+                          <div class="filter__block filter__block--collection">
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Necklaces</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Chokers</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox">
+                                  <p>Rings</p>
+                              </label>
+                              <label for="">
+                                  <input type="checkbox" checked>
+                                  <p>Earrings</p>
+                              </label>
+                          </div>
+                          
+                      </fieldset>
+                      <fieldset>
+
+                          <legend class="visibility-hidden">Price</legend>
+                          <button class="filter__btn-price" type="button">Price</button>
+                          <div class="filter__block filter__block--range">
+
+                            <div class="filter__range-slider">
+                              <div class="filter__range">
+                                <div class="filter__range-progress"></div>
+                                <label class="filter__range-min" for="range-min">
                                     <input value="55" min="0" max="200" step="5" type="range" id="range-min">
                                 </label>
-                                <label for="range-max">
+                                <label class="filter__range-max" for="range-max">
                                     <input value="155" min="0" max="200" step="5" type="range" id="range-max">
                                 </label>
+                              </div>
+
+                              <div class="filter__range-value">
+                                  <label class="filter__range-value-min" for="range-value-min">
+                                      <span>$</span>
+                                      <input type="number" value="55" min="0" max="200" id="range-value-min"/>
+                                  </label>
+                                  <label class="filter__range-value-max" for="range-value-max">
+                                      <span>$</span>
+                                      <input type="number" value="55" min="0" max="200" id="range-value-max"/>
+                                  </label>
+                              </div>
                             </div>
-    
-                            <div class="filter__range-value">
-                                <label for="min">
-                                    <span>$</span>
-                                    <input type="number" id="min" value="55" min="0" max="200"/>
-                                </label>
-                                <label for="max">
-                                    <span>$</span>
-                                    <input type="number" id="max" value="55" min="0" max="200"/>
-                                </label>
-                            </div>
-                        </div>
-                    </fieldset>
+                          </div>
+                      </fieldset>
+                  </div>
+                  <button class="form__btn form__btn--submit" type="submit">Apply</button>
+                  <button class="form__btn form__btn--reset" type="reset">Clear All</button>
                 </div>
-                <button type="submit">Apply</button>
-                <button type="reset">Clear All</button>
             </form>
+          </div>
+
+          <!-- catalog -->
+
+          <div class="catalog-wrapper__catalog catalog">
+            <ul class="catalog__list">
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-1.jpg" alt="Double pearl earrings">
+                  <h3>Double pearl earrings</h3>
+                  <p>$ 115</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-2.jpg" alt="Choker with gold bead">
+                  <h3>Choker with gold bead</h3>
+                  <p>$ 55</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-3.jpg" alt="Gold layered necklace">
+                  <h3>Gold layered necklace</h3>
+                  <p>$ 155</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-4.jpg" alt="Blue gemstone pendant">
+                  <h3>Blue gemstone pendant</h3>
+                  <p>$ 105</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-5.jpg" alt="Boho earrings">
+                  <h3>Boho earrings</h3>
+                  <p>$ 75</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-6.jpg" alt="Gold bird necklace">
+                  <h3>Gold bird necklace</h3>
+                  <p>$ 135</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-7.jpg" alt="Black leather choker">
+                  <h3>Black leather choker</h3>
+                  <p>$ 85</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-8.jpg" alt="Necklace with amethyst">
+                  <h3>Necklace with amethyst</h3>
+                  <p>$ 145</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-9.jpg" alt="Elephant earrings">
+                  <h3>Elephant earrings</h3>
+                  <p>$ 95</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-10.jpg" alt="Threader necklace">
+                  <h3>Threader necklace</h3>
+                  <p>$ 115</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-11.jpg" alt="Origami crane necklace">
+                  <h3>Origami crane necklace</h3>
+                  <p>$ 105</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img width="270" height="272" src="img/catalog/item-12.jpg" alt="Marble earrings">
+                  <h3>Marble earrings</h3>
+                  <p>$ 95</p>
+                </a>
+              </li>
+            </ul>
+
+            <div class="catalog__nav">
+              <a href="#">Previous</a>
+              <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+              </ul>
+              <a href="#">Next</a>
+            </div>
+          </div>
         </div>
+        
     </main>
 
     <!-- footer -->
