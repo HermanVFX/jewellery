@@ -4,9 +4,19 @@
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 
-@import "blocks/catalog/top.scss";
 @import "blocks/catalog/filter.scss";
 @import "blocks/catalog/catalog.scss";
+
+@import "blocks/main/catalog-slider.scss";
+@import "blocks/main/blog.scss";
+@import "blocks/main/faq.scss";
+@import "blocks/main/gallery.scss";
+
+@import "element/catalog-list.scss";
+@import "element/top.scss";
+@import "element/section-head.scss";
+@import "element/slider.scss";
+
 
 .menu-js {
     position: fixed;

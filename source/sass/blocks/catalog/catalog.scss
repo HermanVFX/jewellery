@@ -10,32 +10,6 @@
     grid-template-columns: repeat(3, 30%);
     column-gap: 5%;
     padding: 0;
-   li {
-       list-style: none;
-       padding: 0;
-       text-align: center;
-   }
-   a {
-       display: block;
-       text-decoration: none;
-       color: #000000;
-   }
-   h3 {
-        margin: 20px auto;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 130%;
-   }
-   p {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 130%;
-        margin: 0 auto 44px auto;
-   }
-   img {
-       width: 100%;
-       height: auto;
-   }
 }
 
 .catalog__nav {

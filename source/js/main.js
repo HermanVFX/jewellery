@@ -27,6 +27,60 @@
     var blockMaterial = document.querySelector('.filter__block--material');
     var blockCollection = document.querySelector('.filter__block--collection');
     var blockPrice = document.querySelector('.filter__block--range');
+    // slider 
+    var radios = document.getElementsByName('radio');
+    var left = document.querySelector('.slider__navigation-btn--last');
+    var right = document.querySelector('.slider__navigation-btn--next');
+    var slider = document.querySelector('.slider__list');
+    // slider 
+    if (radios &&
+        slider &&
+        left &&
+        right) {
+            function sliderSwipe(item) {
+                // if (item > 0 && item <= max) {
+                    slider.style.marginLeft = (item - 1) * (-102.5) + '%';
+                // }
+            };
+            var value;
+            for (var i = 0; i < radios.length; i++) {
+                var radio = radios[i];
+                radio.addEventListener('input', function () {
+                    var activeRadio = document.querySelector('.slider__radio input:checked');
+                    if (activeRadio && activeRadio.checked) {
+                        value = activeRadio.value;  
+                        sliderSwipe(value);
+                        i = activeRadio.value;
+                    }
+                });
+            };
+            right.addEventListener('click', function () {
+                var activeRadio = document.querySelector('.slider__radio input:checked');
+                    if (activeRadio && activeRadio.checked) {
+                        value = activeRadio.value;  
+                        if (radios.length <= value) {
+                            value = 1;
+                        } else {
+                            value++;
+                        }
+                        sliderSwipe(value);
+                        radios[value - 1].checked = true;
+                    }
+            });
+            left.addEventListener('click', function () {
+                var activeRadio = document.querySelector('.slider__radio input:checked');
+                    if (activeRadio && activeRadio.checked) {
+                        value = activeRadio.value;
+                        if (1 >= value) {
+                            value = radios.length;
+                        } else {
+                            value--;
+                        }
+                        sliderSwipe(value);
+                        radios[value - 1].checked = true;
+                    }
+            });
+        }
     // accordeon
     if (btnProduct &&
         btnMaterial &&
