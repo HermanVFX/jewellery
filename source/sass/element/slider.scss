@@ -1,31 +1,78 @@
 .slider__navigation {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .slider__navigation-btn {
-    font-size: 0;
-    border: none;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 29px;
-    height: 9px;
-    background-image: url(../img/navigation.svg);
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 29px;
+  height: 9px;
+  background-image: url("../img/navigation.svg");
 
-    &--last {
-        transform: rotate(-180deg);
-    }
+  &--last {
+    transform: rotate(-180deg);
+  }
 }
 
 .slider__wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .slider__list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 2.5%;
+  max-width: 100%;
+  padding: 0;
+  transition: all 0.3s ease;
+
+  li {
+    min-width: 23.12%;
+  }
+}
+
+.slider__radio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  label:not(:nth-child(-n+3)) {
+    visibility: hidden;
+    font-size: 0;
+    width: 0;
+    margin-left: -15px;
+  }
+
+  input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    visibility: hidden;
+
+    &:checked + p {
+      color: $black;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $gray;
+  }
+}
+
+@media (max-width: $tablet) {
+  .slider__list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -35,47 +82,16 @@
     transition: all 0.3s ease;
 
     li {
-        min-width: 23.12%;
+      min-width: 48.5%;
     }
-}
+  }
 
-.slider__radio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-
-    input {
-        width: 0;
-        height: 0;
-        padding: 0;
-        visibility: hidden;
-
-        &:checked + p {
-            color: #1D1613;
-        }
+  .slider__radio {
+    label:not(:nth-child(-n+3)) {
+      visibility: visible;
+      font-size: 16px;
+      width: auto;
+      margin-left: 0;
     }
-
-    p {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 130%;
-        color: #9B9997;
-    }
-}
-
-@media (max-width: 1023px) {
-    .slider__list {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        gap: 2.5%;
-        max-width: 100%;
-        padding: 0;
-        transition: all 0.3s ease;
-    
-        li {
-            min-width: 48.5%;
-        }
-    }
+  }
 }

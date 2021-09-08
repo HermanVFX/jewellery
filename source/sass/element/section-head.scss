@@ -1,25 +1,25 @@
 .section-head {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 
-    h2 {
-        font-family: Cormorant Garamond;
-        font-weight: bold;
-        font-size: 34px;
-        line-height: 130%;
-        color: #1D1613;
-    }
+  h2 {
+    font-family: "Cormorant Garamond", "Georgia", serif;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%;
+    color: $black;
+  }
 
-    a {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 130%;
-        color: #1D1613;
-        display: block;
-        width: min-content;
-        text-decoration: none;
-        white-space: nowrap;
-        margin: auto;
-        border-bottom: 1px solid #A87B62;
-    }
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $black;
+    display: block;
+    width: min-content;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: auto;
+    border-bottom: 1px solid $main-color;
+  }
 }

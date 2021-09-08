@@ -1,47 +1,66 @@
 @import "global/fonts.scss";
-
+@import "global/variables.scss";
+// global
 @import "blocks/page.scss";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
-
+// catalog
 @import "blocks/catalog/filter.scss";
 @import "blocks/catalog/catalog.scss";
-
+// main
 @import "blocks/main/catalog-slider.scss";
 @import "blocks/main/blog.scss";
 @import "blocks/main/faq.scss";
 @import "blocks/main/gallery.scss";
-
+// element
 @import "element/catalog-list.scss";
 @import "element/top.scss";
 @import "element/section-head.scss";
 @import "element/slider.scss";
 
-
 .menu-js {
-    position: fixed;
-    min-height: 778px;
-    height: 100%;
-    overflow: auto;
-    width: 100%;
-    z-index: 4;
+  position: fixed;
+  min-height: 778px;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  z-index: 4;
 }
 
 .catalog-wrapper {
-    max-width: 1170px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 25px;
-    padding-right: 25px;
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .overflow {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .visibility-hidden {
+  padding: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  pointer-events: none;
+  margin: 0;
+
+  & > * {
+    height: 0;
+  }
+}
+
+img {
+  object-fit: cover;
+}
+
+@media (max-width: $tablet) {
+  .tablet-hidden {
     padding: 0;
     width: 0;
     height: 0;
@@ -49,22 +68,9 @@
     visibility: hidden;
     pointer-events: none;
     margin: 0;
-    & > * {
-        height: 0;
-    }
-}
 
-@media (max-width: 1023px) {
-    .tablet-hidden {
-        padding: 0;
-        width: 0;
-        height: 0;
-        font-size: 0;
-        visibility: hidden;
-        pointer-events: none;
-        margin: 0;
-        & > * {
-            height: 0;
-        }
+    & > * {
+      height: 0;
     }
+  }
 }

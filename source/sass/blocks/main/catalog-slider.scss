@@ -1,6 +1,17 @@
+.catalog-slider {
+  max-width: 100vw;
+  width: 100%;
+}
+
 .catalog-slider__wrapper {
-    max-width: 1170px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin: auto;
+  max-width: 1170px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: auto;
+}
+
+@media (max-width: $tablet) {
+  .catalog-slider__slider {
+    width: 100%;
+  }
 }
