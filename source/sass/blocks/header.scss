@@ -23,9 +23,8 @@
   align-items: center;
 
   label {
-    display: inline-block;
-    vertical-align: auto;
-    padding-left: 29px;
+    margin-top: -26px;
+    padding-left: 27px;
     position: relative;
 
     &::after {
@@ -34,7 +33,7 @@
       width: 14px;
       height: 14px;
       left: 0;
-      top: 0;
+      top: 2px;
       background-image: url("../img/icon-search-black.svg");
       background-position: center;
       background-size: contain;
@@ -43,10 +42,12 @@
   }
 
   input {
+    width: 100%;
     border: 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
+    letter-spacing: 0.75px;
     display: flex;
     color: $gray;
   }
@@ -54,7 +55,7 @@
 
 .header__logo {
   display: block;
-  margin: 19px auto;
+  margin: 5px auto;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
@@ -77,6 +78,7 @@
     display: flex;
     align-items: center;
     color: $black;
+    max-height: 55px;
   }
 }
 
@@ -87,17 +89,18 @@
 }
 
 .header__menu-wrapper {
+  margin-top: 6px;
   border-top: 1px solid $light-gray;
 }
 
 .header__menu {
   ul {
-    padding: 0;
+    padding: 0 0 0 10px;
     display: grid;
     grid-template-columns: repeat(5, max-content);
     column-gap: 35px;
     width: min-content;
-    margin: 25px auto;
+    margin: 18px auto;
   }
 
   li {
@@ -121,7 +124,7 @@
   visibility: hidden;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $tablet) {
   .header {
     position: relative;
 
@@ -179,6 +182,7 @@
     padding-left: 0;
     padding-right: 0;
     grid-template-columns: 30px 1fr 30px;
+    margin-top: -47px;
   }
 
   .header__search {
@@ -210,8 +214,9 @@
   }
 
   .header__menu-button {
-    width: 25px;
-    height: 16px;
+    margin-top: 52px;
+    width: 26px;
+    height: 19px;
     background-image: url("../img/menu-black.svg");
     visibility: visible;
     background-color: transparent;
@@ -222,8 +227,9 @@
 
   .header__cart {
     display: block;
-    width: 18px;
-    height: 16px;
+    width: 39px;
+    height: 19px;
+    margin-top: 29px;
     background-image: url("../../img/cart-black.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -300,5 +306,28 @@
     bottom: 80px;
     left: 40px;
     visibility: hidden;
+  }
+}
+
+@media (max-width: $mobile) {
+  .header__top {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: -3px;
+  }
+
+  .header__menu-button {
+    margin-top: 36px;
+  }
+
+  .header__logo {
+    width: 50px;
+    margin-top: 13px;
+    margin-bottom: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

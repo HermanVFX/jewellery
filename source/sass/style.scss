@@ -17,6 +17,8 @@
 @import "element/top.scss";
 @import "element/section-head.scss";
 @import "element/slider.scss";
+@import "element/login.scss";
+
 
 .menu-js {
   position: fixed;
@@ -30,11 +32,11 @@
 .catalog-wrapper {
   max-width: 1170px;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-left: 25px;
-  padding-right: 25px;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  column-gap: 50px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .overflow {
@@ -60,6 +62,10 @@ img {
 }
 
 @media (max-width: $tablet) {
+  .catalog-wrapper {
+    grid-template-columns: 1fr;
+  }
+
   .tablet-hidden {
     padding: 0;
     width: 0;
@@ -72,5 +78,12 @@ img {
     & > * {
       height: 0;
     }
+  }
+}
+
+@media (max-width: $mobile) {
+  .catalog-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

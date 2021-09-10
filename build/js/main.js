@@ -40,6 +40,28 @@
   var faqBtn02 = document.querySelector('.faq-btn-2');
   var faqBtn03 = document.querySelector('.faq-btn-3');
   var faqBtn04 = document.querySelector('.faq-btn-4');
+  // popup login
+  var popup = document.querySelector('.login');
+  var openPopupBtn = document.querySelector('.header__login');
+  var closePopupBtn = document.querySelector('.login__close-btn');
+  var popupOverlay = document.querySelector('.login__overlay');
+  // popup login
+  function closeLogin() {
+    if (popup && popup.classList.contains('login--open')) {
+      popup.classList.remove('login--open');
+    }
+  }
+  if (popupOverlay && popup && openPopupBtn && closePopupBtn) {
+    closePopupBtn.addEventListener('click', closeLogin);
+    popupOverlay.addEventListener('click', closeLogin);
+    openPopupBtn.addEventListener('click', function (event) {
+      if(!popup.classList.contains('login--open')) {
+        popup.classList.add('login--open');
+        event.preventDefault();
+        return false;
+      }
+    });
+  }
   // accordeon faq
   function accordeonFaq(button, block) {
     button.addEventListener('click', function () {
@@ -71,9 +93,10 @@
       accordeonFaq(faqBtn04, faqBlock04);
   }
   // slider
-  // swipe(myBlock, { maxTime: 1000, minTime: 100, maxDist: 150,  minDist: 60 });
   function sliderSwipe(item) {
-    slider.style.marginLeft = (item - 1) * (-102.5) + '%';
+    if (slider) {
+      slider.style.marginLeft = (item - 1) * (-102.5) + '%';
+    }
   }
   function sliderLeft(list) {
     var max;
