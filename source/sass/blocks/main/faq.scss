@@ -1,3 +1,11 @@
+.faq {
+  margin-top: 120px;
+
+  h2 {
+    letter-spacing: 1px;
+  }
+}
+
 .faq__wrapper {
   max-width: 970px;
   margin: auto;
@@ -8,6 +16,7 @@
 .faq__accordeon {
   border: 1px solid $main-color;
   padding: 0;
+  margin-top: 48px;
 }
 
 .faq__item {
@@ -19,18 +28,16 @@
 
   button {
     width: 100%;
-    height: 112px;
+    height: 111px;
     text-align: left;
-    padding-left: 38px;
+    padding-left: 43px;
+    letter-spacing: 1.2px;
     background-color: transparent;
     border: none;
     background-image: url("../img/accordeon.svg");
     background-position: right 50px top 52px;
     background-size: 15px;
     background-repeat: no-repeat;
-  }
-
-  h3 {
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
@@ -57,16 +64,77 @@
       color: #1d1613;
       max-width: 527px;
       width: 90%;
-      margin: -30px auto 49px 50px;
+      margin: -37px auto 43px 50px;
       visibility: visible;
       height: auto;
     }
   }
 }
 
+@media (max-width: $tablet) {
+  .faq {
+    margin-top: 70px;
+  }
+
+  .faq__item {
+    min-height: 110px;
+
+    button {
+      padding-left: 50px;
+      height: 112px;
+    }
+
+    p {
+      margin-top: -18px;
+      max-width: 530px;
+    }
+  }
+}
+
 @media (max-width: $mobile) {
+  .faq {
+    margin-top: 60px;
+  }
+
   .faq__wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .faq__accordeon {
+    margin-top: 28px;
+  }
+
+  .faq__item {
+    min-height: 81px;
+
+    button {
+      padding-left: 23px;
+      height: 78px;
+      padding-right: 40px;
+      background-position: right 22px top 23px;
+      background-size: 24px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      margin: 0 0 0 0;
+    }
+
+    &--active {
+      button {
+        background-image: url("../img/accordeon-open.svg");
+      }
+
+      p {
+        margin: -3px 55px 18px 24px;
+      }
+    }
+
+    p {
+      width: auto;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 145%;
+    }
   }
 }

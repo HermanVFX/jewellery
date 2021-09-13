@@ -10,18 +10,23 @@
     line-height: 130%;
     display: flex;
     align-items: center;
-    text-align: center;
     color: $white;
     text-decoration: none;
   }
 }
 
 .footer__wrapper {
-  padding-left: 98px;
-  padding-right: 98px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: auto;
+  max-width: 1170px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.footer__email {
+  position: relative;
 }
 
 .footer__call-back {
@@ -62,8 +67,8 @@
 
   button {
     position: absolute;
-    right: 4px;
-    bottom: 0;
+    right: 2px;
+    bottom: 9px;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -85,6 +90,8 @@
 }
 
 .footer__menu {
+  width: 41%;
+
   ul {
     padding: 0 0 0 63px;
     column-count: 2;
@@ -93,6 +100,7 @@
   }
 
   li {
+    white-space: nowrap;
     list-style: none;
     margin-bottom: 22px;
   }
@@ -136,6 +144,8 @@
     padding-left: 45px;
     padding-right: 45px;
     max-width: 572px;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .footer__call-back {
@@ -147,6 +157,8 @@
   }
 
   .footer__menu {
+    width: 74%;
+
     ul {
       padding: 0;
       margin-top: 45px;
@@ -168,12 +180,13 @@
 
 @media (max-width: $mobile) {
   .footer {
-    padding-top: 55px;
+    padding-top: 50px;
   }
 
   .footer__wrapper {
     padding-left: 15px;
     padding-right: 15px;
+    flex-direction: column;
   }
 
   .footer__call-back {
@@ -181,19 +194,31 @@
       width: 80%;
       margin-top: 19px;
       line-height: 22px;
+
+      &:not(:first-child) {
+        line-height: 22px;
+        margin-top: 13px;
+        margin-bottom: 37px;
+      }
+    }
+
+    button {
+      right: 3px;
+      bottom: 9px;
     }
   }
 
   .footer__menu {
     ul {
+      margin-top: 47px;
       column-count: 1;
     }
 
     li {
-      margin-bottom: 30px;
+      margin-bottom: 22px;
 
       &:nth-child(4n) {
-        margin-bottom: 50px;
+        margin-bottom: 42px;
       }
     }
   }
@@ -204,10 +229,13 @@
       grid-template-columns: repeat(5, min-content);
       column-gap: 30px;
       padding: 0;
+      margin-top: -13px;
     }
 
     li {
       list-style: none;
+      margin-left: 0;
+      padding: 0;
     }
 
     a {

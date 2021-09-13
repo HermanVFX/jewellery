@@ -18,46 +18,50 @@
 
     <header class="header header--open">
 
-      <div class="header__top">
-        <button type="button" class="header__menu-button">Open menu</button>
-        <div class="header__top-wrapper">
-          <div class="header__search">
-            <label for="main-search">
-              <input type="text" id="main-search" placeholder="Type here to search">
-            </label>
-          </div>
-          <a href="#" class="header__logo">
-            <img src="img/logo-brown.svg" width="66" height="66" alt="Logotype Jewellery">
-          </a>
-          <div class="header__login-cart">
-            <a href="#" class="header__login">Login</a>
-            <a href="#" class="header__cart">
-              <p>Cart</p>
-              <span class="header__cart-volume">0</span>
+      <div class="header__wrapper">
+
+        <div class="header__top">
+          <button type="button" class="header__menu-button">Open menu</button>
+          <div class="header__top-wrapper">
+            <div class="header__search">
+              <label for="main-search">
+                <input type="text" id="main-search" placeholder="Type here to search">
+              </label>
+            </div>
+            <a href="#" class="header__logo">
+              <img src="img/logo-brown.svg" width="66" height="66" alt="Logotype Jewellery">
             </a>
+            <div class="header__login-cart">
+              <a href="account.html" class="header__login">Login</a>
+              <a href="#" class="header__cart">
+                <p>Cart</p>
+                <span class="header__cart-volume">0</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- menu -->
+        <!-- menu -->
 
-      <div class="header__menu-wrapper">
-        <nav class="header__menu">
-          <ul>
-            <li><a href="#">What’s new</a></li>
-            <li><a href="#">Chokers</a></li>
-            <li><a href="#">Necklaces</a></li>
-            <li><a href="#">Rings</a></li>
-            <li><a href="#">Earrings</a></li>
-          </ul>
-        </nav>
-        <div class="header__side-menu">
-          <ul>
-            <li><a href="#">About CH</a></li>
-            <li><a href="#">Stores & Hours</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
+        <div class="header__menu-wrapper">
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#">What’s new</a></li>
+              <li><a href="#">Chokers</a></li>
+              <li><a href="#">Necklaces</a></li>
+              <li><a href="#">Rings</a></li>
+              <li><a href="#">Earrings</a></li>
+            </ul>
+          </nav>
+          <div class="header__side-menu">
+            <ul>
+              <li><a href="#">About CH</a></li>
+              <li><a href="#">Stores & Hours</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
+
       </div>
 
     </header>
@@ -81,7 +85,7 @@
 
           <div class="catalog-wrapper__filter filter">
             <button class="filter__open-btn" type="button">Filter</button>
-            <form action="" method="POST" class="filter__form tablet-hidden">
+            <form id="filter-form" method="POST" class="filter__form form tablet-hidden">
                 <div class="form__overlay"></div>
                 <div class="form__wrapper">
                   <button class="filter__close-btn" type="button">Close</button>
@@ -92,21 +96,25 @@
                           <button class="filter__btn-product" type="button">Product</button>
 
                           <div class="filter__block filter__block--product">
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Necklaces</p>
+                              <label for="filterCheck01">
+                                  <input type="checkbox" id="filterCheck01" checked="">
+                                  <span class="filter__check"></span>
+                                  Necklaces
                               </label>
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Chokers</p>
+                              <label for="filterCheck02">
+                                  <input type="checkbox" id="filterCheck02" checked="">
+                                  <span class="filter__check"></span>
+                                  Chokers
                               </label>
-                              <label for="">
-                                  <input type="checkbox">
-                                  <p>Rings</p>
+                              <label for="filterCheck03">
+                                  <input type="checkbox" id="filterCheck03">
+                                  <span class="filter__check"></span>
+                                  Rings
                               </label>
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Earrings</p>
+                              <label for="filterCheck04">
+                                  <input type="checkbox" id="filterCheck04" checked="">
+                                  <span class="filter__check"></span>
+                                  Earrings
                               </label>
                           </div>
 
@@ -118,13 +126,15 @@
                           <button class="filter__btn-material" type="button">Material</button>
 
                           <div class="filter__block filter__block--material">
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Gold</p>
+                              <label for="filterCheck05">
+                                  <input type="checkbox" id="filterCheck05" checked="">
+                                  <span class="filter__check"></span>
+                                  Gold
                               </label>
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Silver</p>
+                              <label for="filterCheck06">
+                                  <input type="checkbox" id="filterCheck06" checked="">
+                                  <span class="filter__check"></span>
+                                  Silver
                               </label>
                           </div>
 
@@ -136,13 +146,15 @@
                           <button class="filter__btn-collection" type="button">Collection</button>
 
                           <div class="filter__block filter__block--collection">
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Pink flamingo</p>
+                              <label for="filterCheck07">
+                                  <input type="checkbox" id="filterCheck07" checked="">
+                                  <span class="filter__check"></span>
+                                  Pink flamingo
                               </label>
-                              <label for="">
-                                  <input type="checkbox" checked="">
-                                  <p>Dreams</p>
+                              <label for="filterCheck08">
+                                  <input type="checkbox" id="filterCheck08" checked="">
+                                  <span class="filter__check"></span>
+                                  Dreams
                               </label>
                           </div>
 
@@ -178,8 +190,8 @@
                           </div>
                       </fieldset>
                   </div>
-                  <button class="form__btn form__btn--submit" type="submit">Apply</button>
-                  <button class="form__btn form__btn--reset" type="reset">Clear All</button>
+                  <button aria-label="Send" form="filter-form" class="form__btn form__btn--submit" type="submit">Apply</button>
+                  <button form="filter-form" class="form__btn form__btn--reset" type="reset">Clear All</button>
                 </div>
             </form>
           </div>
@@ -190,7 +202,10 @@
             <ul class="catalog__list catalog-list">
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-1.jpg" alt="Double pearl earrings">
+                  <picture>
+                    <source srcset="img/catalog/item-1.webp, img/catalog/item-1-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-1.jpg" srcset="img/catalog/item-1-x2.jpg 2x" alt="Double pearl earrings">
+                  </picture>
                   <h3>Double pearl earrings</h3>
                   <p>$ 115</p>
                 </a>
@@ -198,7 +213,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-2.jpg" alt="Choker with gold bead">
+                  <picture>
+                    <source srcset="img/catalog/item-2.webp, img/catalog/item-2-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-2.jpg" srcset="img/catalog/item-2-x2.jpg 2x" alt="Choker with gold bead">
+                  </picture>
                   <h3>Choker with gold bead</h3>
                   <p>$ 55</p>
                 </a>
@@ -206,7 +224,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-3.jpg" alt="Gold layered necklace">
+                  <picture>
+                    <source srcset="img/catalog/item-3.webp, img/catalog/item-3-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-3.jpg" srcset="img/catalog/item-3-x2.jpg 2x" alt="Gold layered necklace">
+                  </picture>
                   <h3>Gold layered necklace</h3>
                   <p>$ 155</p>
                 </a>
@@ -214,7 +235,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-4.jpg" alt="Blue gemstone pendant">
+                  <picture>
+                    <source srcset="img/catalog/item-4.webp, img/catalog/item-4-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-4.jpg" srcset="img/catalog/item-4-x2.jpg 2x" alt="Blue gemstone pendant">
+                  </picture>
                   <h3>Blue gemstone pendant</h3>
                   <p>$ 105</p>
                 </a>
@@ -222,7 +246,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-5.jpg" alt="Boho earrings">
+                  <picture>
+                    <source srcset="img/catalog/item-5.webp, img/catalog/item-5-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-5.jpg" srcset="img/catalog/item-5-x2.jpg 2x" alt="Boho earrings">
+                  </picture>
                   <h3>Boho earrings</h3>
                   <p>$ 75</p>
                 </a>
@@ -230,7 +257,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-6.jpg" alt="Gold bird necklace">
+                  <picture>
+                    <source srcset="img/catalog/item-6.webp, img/catalog/item-6-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-6.jpg" srcset="img/catalog/item-6-x2.jpg 2x" alt="Gold bird necklace">
+                  </picture>
                   <h3>Gold bird necklace</h3>
                   <p>$ 135</p>
                 </a>
@@ -238,7 +268,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-7.jpg" alt="Black leather choker">
+                  <picture>
+                    <source srcset="img/catalog/item-7.webp, img/catalog/item-7-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-7.jpg" srcset="img/catalog/item-7-x2.jpg 2x" alt="Black leather choker">
+                  </picture>
                   <h3>Black leather choker</h3>
                   <p>$ 85</p>
                 </a>
@@ -246,7 +279,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-8.jpg" alt="Necklace with amethyst">
+                  <picture>
+                    <source srcset="img/catalog/item-8.webp, img/catalog/item-8-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-8.jpg" srcset="img/catalog/item-8-x2.jpg 2x" alt="Necklace with amethyst">
+                  </picture>
                   <h3>Necklace with amethyst</h3>
                   <p>$ 145</p>
                 </a>
@@ -254,7 +290,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-9.jpg" alt="Elephant earrings">
+                  <picture>
+                    <source srcset="img/catalog/item-9.webp, img/catalog/item-9-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-9.jpg" srcset="img/catalog/item-9-x2.jpg 2x" alt="Elephant earrings">
+                  </picture>
                   <h3>Elephant earrings</h3>
                   <p>$ 95</p>
                 </a>
@@ -262,7 +301,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-10.jpg" alt="Threader necklace">
+                  <picture>
+                    <source srcset="img/catalog/item-10.webp, img/catalog/item-10-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-10.jpg" srcset="img/catalog/item-10-x2.jpg 2x" alt="Threader necklace">
+                  </picture>
                   <h3>Threader necklace</h3>
                   <p>$ 115</p>
                 </a>
@@ -270,7 +312,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-11.jpg" alt="Origami crane necklace">
+                  <picture>
+                    <source srcset="img/catalog/item-11.webp, img/catalog/item-11-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-11.jpg" srcset="img/catalog/item-11-x2.jpg 2x" alt="Origami crane necklace">
+                  </picture>
                   <h3>Origami crane necklace</h3>
                   <p>$ 105</p>
                 </a>
@@ -278,7 +323,10 @@
 
               <li>
                 <a href="#">
-                  <img width="270" height="272" src="img/catalog/item-12.jpg" alt="Marble earrings">
+                  <picture>
+                    <source srcset="img/catalog/item-12.webp, img/catalog/item-12-x2.webp 2x" type="image/webp">
+                    <img width="270" height="272" src="img/catalog/item-12.jpg" srcset="img/catalog/item-12-x2.jpg 2x" alt="Marble earrings">
+                  </picture>
                   <h3>Marble earrings</h3>
                   <p>$ 95</p>
                 </a>
@@ -299,6 +347,28 @@
           </div>
         </div>
 
+              <!-- popup-login -->
+
+      <div class="login">
+        <div class="login__overlay"></div>
+        <div class="login__block">
+          <button class="login__close-btn">Close</button>
+          <div class="login__form-wrapper">
+            <form class="login__form">
+              <p class="login__head">Log In</p>
+              <label for="e-mail">
+                <input type="email" name="email" id="e-mail" placeholder="Your E-mail">
+              </label>
+              <label for="password">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <a href="#">Forgot your password?</a>
+              </label>
+              <button id="popup-send" type="button">Log In</button>
+              <p class="login__problem">Don’t have an account?<a href="#" tabindex="2">Sign up</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
@@ -309,10 +379,13 @@
         <div class="footer__call-back">
           <p>The good stuff in your inbox </p>
           <p>News and updates from CH. No spam, we promise.</p>
-          <label for="footer-email">
-            <input type="email" id="footer-email" placeholder="Your E-mail">
+          <div class="footer__email">
+            <label for="footer-email">
+              <input type="email" id="footer-email" placeholder="Your E-mail">
+            </label>
             <button type="submit">Sign Up</button>
-          </label>
+          </div>
+
         </div>
 
         <div class="footer__menu">
@@ -341,9 +414,9 @@
 
     </footer>
 
-  </body>
-
     <!-- scripts -->
 
     <script src="js/main.js"></script>
+
+  </body>
 </html>

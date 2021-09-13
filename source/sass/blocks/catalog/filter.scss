@@ -34,10 +34,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  p {
-    margin: 0;
-  }
 }
 
 .form__accordeon {
@@ -82,7 +78,7 @@
 .filter__block {
   padding-left: 35px;
   padding-right: 35px;
-  padding-bottom: 26px;
+  padding-bottom: 28px;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
@@ -92,19 +88,44 @@
     padding: 0;
   }
 
-  label:not(:last-child) {
-    margin-bottom: 11px;
+  input[type="checkbox"] {
+    appearance: none;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    margin-right: 20px;
   }
 
-  p {
-    margin-left: 4px;
+  label {
+    cursor: pointer;
+    position: relative;
+  }
+
+  input:checked + .filter__check {
+    background-color: $main-color;
+  }
+
+  input:focus + .filter__check {
+    outline: 2px solid $black;
+  }
+
+  .filter__check {
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    width: 14px;
+    height: 13px;
+    border: 1px solid $main-color;
+  }
+
+  label:not(:last-child) {
+    margin-bottom: 12px;
   }
 }
+
 
 .filter__range-value {
   width: 200px;
   position: relative;
-  margin-top: 14px;
 
   label {
     position: absolute;
@@ -130,7 +151,6 @@
   background-color: $light;
   width: 200px;
   height: 1px;
-  top: 0;
   left: 0;
   position: absolute;
 }
@@ -145,6 +165,10 @@
   z-index: 5;
   display: block;
   pointer-events: none;
+
+  label {
+    margin-bottom: 0;
+  }
 }
 
 .filter__range-slider {
@@ -172,6 +196,10 @@
     height: 15px;
     margin: 0;
     padding: 0;
+
+    &:focus {
+      outline: 2px solid $black;
+    }
 
     &::-webkit-slider-thumb {
       pointer-events: all;
@@ -232,10 +260,12 @@
 }
 
 .filter__range-min {
+  top: 0;
   left: -7px;
 }
 
 .filter__range-max {
+  top: -13px;
   left: 7px;
 }
 
@@ -283,6 +313,7 @@
   }
 
   .filter__form {
+    z-index: 10;
     position: fixed;
     height: 100%;
     overflow: auto;

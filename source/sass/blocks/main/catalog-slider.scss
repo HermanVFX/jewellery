@@ -1,4 +1,5 @@
 .catalog-slider {
+  margin-top: 121px;
   max-width: 100vw;
   width: 100%;
 }
@@ -11,7 +12,22 @@
 }
 
 @media (max-width: $tablet) {
+  .catalog-slider {
+    margin-top: 71px;
+  }
+
   .catalog-slider__slider {
     width: 100%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .catalog-slider {
+    margin-top: 60px;
+  }
+
+  .catalog-slider__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

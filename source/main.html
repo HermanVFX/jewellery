@@ -18,46 +18,50 @@
 
     <header class="header header--open">
 
-      <div class="header__top">
-        <button type="button" class="header__menu-button">Open menu</button>
-        <div class="header__top-wrapper">
-          <div class="header__search">
-            <label for="main-search">
-              <input type="text" id="main-search" placeholder="Type here to search">
-            </label>
-          </div>
-          <a href="#" class="header__logo">
-            <img src="img/logo-brown.svg" width="66" height="66" alt="Logotype Jewellery">
-          </a>
-          <div class="header__login-cart">
-            <a href="account.html" class="header__login">Login</a>
-            <a href="#" class="header__cart">
-              <p>Cart</p>
-              <span class="header__cart-volume">0</span>
+      <div class="header__wrapper">
+
+        <div class="header__top">
+          <button type="button" class="header__menu-button">Open menu</button>
+          <div class="header__top-wrapper">
+            <div class="header__search">
+              <label for="main-search">
+                <input type="text" id="main-search" placeholder="Type here to search">
+              </label>
+            </div>
+            <a href="#" class="header__logo">
+              <img src="img/logo-brown.svg" width="66" height="66" alt="Logotype Jewellery">
             </a>
+            <div class="header__login-cart">
+              <a href="account.html" class="header__login">Login</a>
+              <a href="#" class="header__cart">
+                <p>Cart</p>
+                <span class="header__cart-volume">0</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- menu -->
+        <!-- menu -->
 
-      <div class="header__menu-wrapper">
-        <nav class="header__menu">
-          <ul>
-            <li><a href="#">What’s new</a></li>
-            <li><a href="#">Chokers</a></li>
-            <li><a href="#">Necklaces</a></li>
-            <li><a href="#">Rings</a></li>
-            <li><a href="#">Earrings</a></li>
-          </ul>
-        </nav>
-        <div class="header__side-menu">
-          <ul>
-            <li><a href="#">About CH</a></li>
-            <li><a href="#">Stores & Hours</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
+        <div class="header__menu-wrapper">
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#">What’s new</a></li>
+              <li><a href="#">Chokers</a></li>
+              <li><a href="#">Necklaces</a></li>
+              <li><a href="#">Rings</a></li>
+              <li><a href="#">Earrings</a></li>
+            </ul>
+          </nav>
+          <div class="header__side-menu">
+            <ul>
+              <li><a href="#">About CH</a></li>
+              <li><a href="#">Stores & Hours</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
+
       </div>
 
     </header>
@@ -101,63 +105,10 @@
               <ul class="slider__list catalog-list">
                 <li>
                   <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-1.jpg" alt="Double pearl earrings">
-                    <h3>Double pearl earrings</h3>
-                    <p>$ 115</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-2.jpg" alt="Choker with gold bead">
-                    <h3>Choker with gold bead</h3>
-                    <p>$ 55</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-3.jpg" alt="Gold layered necklace">
-                    <h3>Gold layered necklace</h3>
-                    <p>$ 155</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-4.jpg" alt="Blue gemstone pendant">
-                    <h3>Blue gemstone pendant</h3>
-                    <p>$ 105</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-5.jpg" alt="Boho earrings">
-                    <h3>Boho earrings</h3>
-                    <p>$ 75</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-6.jpg" alt="Gold bird necklace">
-                    <h3>Gold bird necklace</h3>
-                    <p>$ 135</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-7.jpg" alt="Black leather choker">
-                    <h3>Black leather choker</h3>
-                    <p>$ 85</p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-8.jpg" alt="Necklace with amethyst">
+                    <picture>
+                      <source srcset="img/catalog/item-8.webp, img/catalog/item-8-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-8.jpg" srcset="img/catalog/item-8-x2.jpg 2x" alt="Necklace with amethyst">
+                    </picture>
                     <h3>Necklace with amethyst</h3>
                     <p>$ 145</p>
                   </a>
@@ -165,7 +116,89 @@
 
                 <li>
                   <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-9.jpg" alt="Elephant earrings">
+                    <picture>
+                      <source srcset="img/catalog/item-13.webp, img/catalog/item-13-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-13.jpg" srcset="img/catalog/item-13-x2.jpg 2x" alt="Double pearl earrings">
+                    </picture>
+                    <h3>Layered сhoker</h3>
+                    <p>$ 115</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-14.webp, img/catalog/item-14-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-14.jpg" srcset="img/catalog/item-14-x2.jpg 2x" alt="Choker with gold bead">
+                    </picture>
+                    <h3>Gold chain</h3>
+                    <p>$ 215</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-15.webp, img/catalog/item-15-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-15.jpg" srcset="img/catalog/item-15-x2.jpg 2x" alt="Gold layered necklace">
+                    </picture>
+                    <h3>Galaxy earrings</h3>
+                    <p>$ 95</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-4.webp, img/catalog/item-4-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-4.jpg" srcset="img/catalog/item-4-x2.jpg 2x" alt="Blue gemstone pendant">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>$ 105</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-5.webp, img/catalog/item-5-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-5.jpg" srcset="img/catalog/item-5-x2.jpg 2x" alt="Boho earrings">
+                    </picture>
+                    <h3>Boho earrings</h3>
+                    <p>$ 75</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-6.webp, img/catalog/item-6-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-6.jpg" srcset="img/catalog/item-6-x2.jpg 2x" alt="Gold bird necklace">
+                    </picture>
+                    <h3>Gold bird necklace</h3>
+                    <p>$ 135</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-7.webp, img/catalog/item-7-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-7.jpg" srcset="img/catalog/item-7-x2.jpg 2x" alt="Black leather choker">
+                    </picture>
+                    <h3>Black leather choker</h3>
+                    <p>$ 85</p>
+                  </a>
+                </li>
+
+
+
+                <li>
+                  <a href="#">
+                    <picture>
+                      <source srcset="img/catalog/item-9.webp, img/catalog/item-9-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-9.jpg" srcset="img/catalog/item-9-x2.jpg 2x" alt="Elephant earrings">
+                    </picture>
                     <h3>Elephant earrings</h3>
                     <p>$ 95</p>
                   </a>
@@ -173,7 +206,10 @@
 
                 <li>
                   <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-10.jpg" alt="Threader necklace">
+                    <picture>
+                      <source srcset="img/catalog/item-10.webp, img/catalog/item-10-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-10.jpg" srcset="img/catalog/item-10-x2.jpg 2x" alt="Threader necklace">
+                    </picture>
                     <h3>Threader necklace</h3>
                     <p>$ 115</p>
                   </a>
@@ -181,7 +217,10 @@
 
                 <li>
                   <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-11.jpg" alt="Origami crane necklace">
+                    <picture>
+                      <source srcset="img/catalog/item-11.webp, img/catalog/item-11-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-11.jpg" srcset="img/catalog/item-11-x2.jpg 2x" alt="Origami crane necklace">
+                    </picture>
                     <h3>Origami crane necklace</h3>
                     <p>$ 105</p>
                   </a>
@@ -189,7 +228,10 @@
 
                 <li>
                   <a href="#">
-                    <img width="270" height="272" src="img/catalog/item-12.jpg" alt="Marble earrings">
+                    <picture>
+                      <source srcset="img/catalog/item-12.webp, img/catalog/item-12-x2.webp 2x" type="image/webp">
+                      <img width="270" height="272" src="img/catalog/item-12.jpg" srcset="img/catalog/item-12-x2.jpg 2x" alt="Marble earrings">
+                    </picture>
                     <h3>Marble earrings</h3>
                     <p>$ 95</p>
                   </a>
@@ -202,27 +244,27 @@
             <div class="slider__radio">
               <label for="slide-1">
                 <input type="radio" value="1" name="radio" id="slide-1" checked>
-                <p>1</p>
+                <span>1</span>
               </label>
               <label for="slide-2">
                 <input type="radio" value="2" name="radio" id="slide-2">
-                <p>2</p>
+                <span>2</span>
               </label>
               <label for="slide-3">
                 <input type="radio" value="3" name="radio" id="slide-3">
-                <p>3</p>
+                <span>3</span>
               </label>
               <label for="slide-4">
                 <input type="radio" value="4" name="radio" id="slide-4">
-                <p>4</p>
+                <span>4</span>
               </label>
               <label for="slide-5">
                 <input type="radio" value="5" name="radio" id="slide-5">
-                <p>5</p>
+                <span>5</span>
               </label>
               <label for="slide-6">
                 <input type="radio" value="6" name="radio" id="slide-6">
-                <p>6</p>
+                <span>6</span>
               </label>
             </div>
 
@@ -242,7 +284,12 @@
           <ul  class="blog__list">
 
             <li class="blog__item">
-              <img src="img/blog/blog-img-1.jpg" width="570" height="630" alt="How to care for your jewellery">
+              <picture>
+                <source media="(max-width: 1023px)" srcset="img/blog/blog-img-1-tablet.webp, img/blog/blog-img-1-tablet-x2.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/blog/blog-img-1-tablet.jpg, img/blog/blog-img-1-tablet-x2.jpg 2x">
+                <source srcset="img/blog/blog-img-1.webp, img/blog/blog-img-1-x2.webp 2x" type="image/webp">
+                <img src="img/blog/blog-img-1.jpg" srcset="img/blog/blog-img-1-x2.jpg 2x" width="570" height="630" alt="How to care for your jewellery">
+              </picture>
               <div class="blog__item-meta">
                 <p>September 30, 2019</p>
                 <h3>How to care for your jewellery</h3>
@@ -251,7 +298,12 @@
             </li>
 
             <li class="blog__item">
-              <img src="img/blog/blog-img-2.jpg" width="570" height="630" alt="">
+              <picture>
+                <source media="(max-width: 1023px)" srcset="img/blog/blog-img-2-tablet.webp, img/blog/blog-img-2-tablet-x2.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/blog/blog-img-2-tablet.jpg, img/blog/blog-img-2-tablet-x2.jpg 2x">
+                <source srcset="img/blog/blog-img-2.webp, img/blog/blog-img-2-x2.webp 2x" type="image/webp">
+                <img src="img/blog/blog-img-2.jpg" srcset="img/blog/blog-img-2-x2.jpg 2x" width="570" height="630" alt="Power of crystals">
+              </picture>
               <div class="blog__item-meta">
                 <p>September 23, 2019</p>
                 <h3>Power of crystals</h3>
@@ -260,7 +312,12 @@
             </li>
 
             <li class="blog__item">
-              <img src="img/blog/blog-img-3.jpg" width="570" height="630" alt="">
+              <picture>
+                <source media="(max-width: 1023px)" srcset="img/blog/blog-img-3-tablet.webp, img/blog/blog-img-3-tablet-x2.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/blog/blog-img-3-tablet.jpg, img/blog/blog-img-3-tablet-x2.jpg 2x">
+                <source srcset="img/blog/blog-img-3.webp, img/blog/blog-img-3-x2.webp 2x" type="image/webp">
+                <img src="img/blog/blog-img-3.jpg" srcset="img/blog/blog-img-3-x2.jpg 2x" width="570" height="630" alt="AW 19 trends">
+              </picture>
               <div class="blog__item-meta">
                 <p>September 16, 2019</p>
                 <h3>AW 19 trends</h3>
@@ -285,22 +342,22 @@
           <ul class="faq__accordeon">
 
             <li class="faq__item faq__item--active faq-1">
-              <button class="faq-btn-1"><h3>What materials are the jewellery made of?</h3></button>
+              <button class="faq-btn-1">What materials are <br class="visibility-mobile"> the jewellery made of?</button>
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
 
             <li class="faq__item faq__item--active faq-2">
-              <button class="faq-btn-2"><h3>Which countries do you deliver to?</h3></button>
+              <button class="faq-btn-2">Which countries <br class="visibility-mobile"> do you deliver to?</button>
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
 
             <li class="faq__item faq__item--active faq-3">
-              <button class="faq-btn-3"><h3>WWhat are the payment methods?</h3></button>
+              <button class="faq-btn-3">What are the <br class="visibility-mobile"> payment methods?</button>
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
 
             <li class="faq__item faq__item--active faq-4">
-              <button class="faq-btn-4"><h3>Can I return the jewellery if it didn’t fit me?</h3></button>
+              <button class="faq-btn-4">Can I return the <br class="visibility-mobile"> jewellery if it didn’t fit me?</button>
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </li>
           </ul>
@@ -311,45 +368,52 @@
 
       <section class="gallery">
         <div class="gallery__wrapper">
-          <div class="section-head">
+          <div class="gallery__head section-head">
             <h2><span>@</span>Chjewellery</h2>
             <a href="#">Follow Us</a>
           </div>
 
           <ul class="gallery__grid">
-            <li>
+            <li class="gallery__item gallery__item--00">
               <picture>
-                <img src="img/gallery/galleery-img-1.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-1.webp, img/gallery/galleery-img-1-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-1.jpg" srcset="img/gallery/galleery-img-1-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
-            <li>
+            <li class="gallery__item gallery__item--big">
               <picture>
-                <img src="img/gallery/galleery-img-3.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-3.webp, img/gallery/galleery-img-3-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-3.jpg" srcset="img/gallery/galleery-img-3-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
-            <li>
+            <li class="gallery__item gallery__item--01">
               <picture>
-                <img src="img/gallery/galleery-img-4.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-4.webp, img/gallery/galleery-img-4-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-4.jpg" srcset="img/gallery/galleery-img-4-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
-            <li>
+            <li class="gallery__item gallery__item--02">
               <picture>
-                <img src="img/gallery/galleery-img-6.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-6.webp, img/gallery/galleery-img-6-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-6.jpg" srcset="img/gallery/galleery-img-6-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
-            <li>
+            <li class="gallery__item gallery__item--03">
               <picture>
-                <img src="img/gallery/galleery-img-2.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-2.webp, img/gallery/galleery-img-2-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-2.jpg" srcset="img/gallery/galleery-img-2-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
-            <li>
+            <li class="gallery__item gallery__item--04">
               <picture>
-                <img src="img/gallery/galleery-img-5.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-5.webp, img/gallery/galleery-img-5-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-5.jpg" srcset="img/gallery/galleery-img-5-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
-            <li>
+            <li class="gallery__item gallery__item--05">
               <picture>
-                <img src="img/gallery/galleery-img-7.jpg" width="399" height="412" alt="gallery">
+                <source srcset="img/gallery/galleery-img-7.webp, img/gallery/galleery-img-7-x2.webp 2x" type="image/webp">
+                <img src="img/gallery/galleery-img-7.jpg" srcset="img/gallery/galleery-img-7-x2.jpg 2x" width="399" height="412" alt="gallery">
               </picture>
             </li>
           </ul>
@@ -363,7 +427,7 @@
         <div class="login__block">
           <button class="login__close-btn">Close</button>
           <div class="login__form-wrapper">
-            <form class="login__form" method="post">
+            <form class="login__form">
               <p class="login__head">Log In</p>
               <label for="e-mail">
                 <input type="email" name="email" id="e-mail" placeholder="Your E-mail">
@@ -372,7 +436,7 @@
                 <input type="password" name="password" id="password" placeholder="Password">
                 <a href="#">Forgot your password?</a>
               </label>
-              <button type="submit">Log In</button>
+              <button id="popup-send" type="button">Log In</button>
               <p class="login__problem">Don’t have an account?<a href="#">Sign up</a></p>
             </form>
           </div>
@@ -388,10 +452,13 @@
         <div class="footer__call-back">
           <p>The good stuff in your inbox </p>
           <p>News and updates from CH. No spam, we promise.</p>
-          <label for="footer-email">
-            <input type="email" id="footer-email" placeholder="Your E-mail">
+          <div class="footer__email">
+            <label for="footer-email">
+              <input type="email" id="footer-email" placeholder="Your E-mail">
+            </label>
             <button type="submit">Sign Up</button>
-          </label>
+          </div>
+
         </div>
 
         <div class="footer__menu">
@@ -420,9 +487,9 @@
 
     </footer>
 
-  </body>
-
     <!-- scripts -->
 
     <script src="js/main.js"></script>
+
+  </body>
 </html>

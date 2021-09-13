@@ -19,6 +19,20 @@
 @import "element/slider.scss";
 @import "element/login.scss";
 
+.logo {
+  margin: 35px auto -50px;
+}
+
+.visibility-mobile {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  visibility: hidden;
+  display: inline;
+  content: " ";
+  clear: none;
+}
 
 .menu-js {
   position: fixed;
@@ -41,6 +55,7 @@
 
 .overflow {
   overflow: hidden;
+  height: 100%;
 }
 
 .visibility-hidden {
@@ -62,6 +77,12 @@ img {
 }
 
 @media (max-width: $tablet) {
+  .menu-js {
+    height: 100vh;
+    min-height: auto;
+    overflow-y: scroll;
+  }
+
   .catalog-wrapper {
     grid-template-columns: 1fr;
   }
@@ -82,6 +103,15 @@ img {
 }
 
 @media (max-width: $mobile) {
+  .visibility-mobile {
+    height: auto;
+    width: auto;
+    visibility: visible;
+    display: block;
+    content: " ";
+    clear: inherit;
+  }
+
   .catalog-wrapper {
     padding-left: 15px;
     padding-right: 15px;

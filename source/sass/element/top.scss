@@ -7,7 +7,6 @@
   padding-top: 195px;
   padding-bottom: 194px;
   line-height: 130%;
-  background-image: url("../img/top-main-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +27,6 @@
 
   h2 {
     font-weight: bold;
-    font-size: 34px;
     text-transform: uppercase;
     margin: 0 0 0 0;
   }
@@ -36,7 +34,6 @@
   p {
     font-style: italic;
     font-weight: 500;
-    font-size: 22px;
     margin: 19px 0 0 0;
     letter-spacing: 0.03px;
   }
@@ -45,12 +42,70 @@
     padding-top: 195px;
     padding-bottom: 194px;
     background-image: url("../img/top-main-image.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/top-main-image-x2.jpg");
+    }
+
+    h2 {
+      font-size: 45px;
+      letter-spacing: 1.2px;
+      padding-top: 7px;
+      width: min-content;
+      margin: auto;
+    }
+
+    p {
+      font-size: 38px;
+      margin-top: 27px;
+      width: min-content;
+      white-space: nowrap;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &--catalog {
     padding-top: 105px;
     padding-bottom: 98px;
     background-image: url("../img/top-catalog-image.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/top-catalog-image-x2.jpg");
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .top {
+    &--main {
+      margin-top: 36px;
+      background-image: url("../img/top-main-image-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/top-main-image-tablet-x2.jpg");
+      }
+
+      h2 {
+        padding-right: 17px;
+      }
+
+      p {
+        padding-right: 17px;
+      }
+    }
+
+    &--catalog {
+      margin-top: 35px;
+    }
   }
 }
 
@@ -63,8 +118,33 @@
     }
 
     &--catalog {
+      margin-top: 0;
       padding-top: 91px;
       padding-bottom: 83px;
+    }
+
+    &--main {
+      margin-top: 0;
+      padding-top: 195px;
+      padding-bottom: 194px;
+      background-image: url("../img/top-main-image-mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/top-main-image-mobile-x2.jpg");
+      }
+
+      h2 {
+        padding-right: 0;
+        font-size: 34px;
+        letter-spacing: 3px;
+      }
+
+      p {
+        font-size: 34px;
+        margin-top: 18px;
+        padding-right: 0;
+        margin-bottom: 3px;
+      }
     }
   }
 }

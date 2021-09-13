@@ -45,30 +45,43 @@
   var openPopupBtn = document.querySelector('.header__login');
   var closePopupBtn = document.querySelector('.login__close-btn');
   var popupOverlay = document.querySelector('.login__overlay');
+  var email = document.getElementById('e-mail');
+  var sendEmail = document.getElementById('popup-send');
   // popup login
   function closeLogin() {
     if (popup && popup.classList.contains('login--open')) {
       popup.classList.remove('login--open');
     }
   }
-  if (popupOverlay && popup && openPopupBtn && closePopupBtn) {
+  if (email && popupOverlay && popup && openPopupBtn && closePopupBtn) {
     closePopupBtn.addEventListener('click', closeLogin);
     popupOverlay.addEventListener('click', closeLogin);
     openPopupBtn.addEventListener('click', function (event) {
-      if(!popup.classList.contains('login--open')) {
+      if (!popup.classList.contains('login--open')) {
         popup.classList.add('login--open');
+        setTimeout(function () {
+          if (popup.classList.contains('login--open')) {
+            email.focus();
+          }
+        }, 250);
+        trapFocus(popup);
         event.preventDefault();
         return false;
       }
+      return event;
+    });
+    sendEmail.addEventListener('click', function () {
+      localStorage.setItem('email', email.value);
+      closeLogin();
     });
   }
   // accordeon faq
   function accordeonFaq(button, block) {
     button.addEventListener('click', function () {
       if (block.classList.contains('faq__item--active')) {
-        block.classList.remove('faq__item--active')
+        block.classList.remove('faq__item--active');
       } else {
-        block.classList.add('faq__item--active')
+        block.classList.add('faq__item--active');
       }
     });
   }
@@ -80,22 +93,31 @@
     faqBtn02 &&
     faqBtn03 &&
     faqBtn04) {
-      var items = document.querySelectorAll('.faq__item--active');
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        if (item && item.classList.contains('faq__item--active')) {
-          item.classList.remove('faq__item--active')
-        }
+    var items = document.querySelectorAll('.faq__item--active');
+    for (var n = 0; n < items.length; n++) {
+      var item = items[n];
+      if (item && item.classList.contains('faq__item--active')) {
+        item.classList.remove('faq__item--active');
       }
-      accordeonFaq(faqBtn01, faqBlock01);
-      accordeonFaq(faqBtn02, faqBlock02);
-      accordeonFaq(faqBtn03, faqBlock03);
-      accordeonFaq(faqBtn04, faqBlock04);
+    }
+    faqBlock01.classList.add('faq__item--active');
+    accordeonFaq(faqBtn01, faqBlock01);
+    accordeonFaq(faqBtn02, faqBlock02);
+    accordeonFaq(faqBtn03, faqBlock03);
+    accordeonFaq(faqBtn04, faqBlock04);
   }
   // slider
-  function sliderSwipe(item) {
+  function sliderSwipe(block) {
+    var gup;
+    if (window.innerWidth > 1023) {
+      gup = 2.5;
+    } else if (window.innerWidth > 767 && window.innerWidth <= 1023) {
+      gup = 4;
+    } else if (window.innerWidth <= 767) {
+      gup = 10;
+    }
     if (slider) {
-      slider.style.marginLeft = (item - 1) * (-102.5) + '%';
+      slider.style.marginLeft = (block - 1) * (-100 - gup) + '%';
     }
   }
   function sliderLeft(list) {
@@ -121,22 +143,22 @@
   function sliderRight(list) {
     var max;
     var value;
-      if (window.innerWidth > 1023) {
-        max = 3;
+    if (window.innerWidth > 1023) {
+      max = 3;
+    } else {
+      max = list.length;
+    }
+    var activeRadio = document.querySelector('.slider__radio input:checked');
+    if (activeRadio && activeRadio.checked) {
+      value = activeRadio.value;
+      if (max <= value) {
+        value = 1;
       } else {
-        max = list.length;
+        value++;
       }
-      var activeRadio = document.querySelector('.slider__radio input:checked');
-      if (activeRadio && activeRadio.checked) {
-        value = activeRadio.value;
-        if (max <= value) {
-          value = 1;
-        } else {
-          value++;
-        }
-        sliderSwipe(value);
-        list[value - 1].checked = true;
-      }
+      sliderSwipe(value);
+      list[value - 1].checked = true;
+    }
   }
   if (radios &&
     slider &&
@@ -262,8 +284,10 @@
   }
   window.onkeydown = function (event) {
     if (event.keyCode === 27) {
-      if (!filter.classList.contains('tablet-hidden')) {
+      if (filter && !filter.classList.contains('tablet-hidden')) {
         closeFilter();
+      } if (popup && popup.classList.contains('login--open')) {
+        closeLogin();
       }
     }
   };
@@ -273,7 +297,9 @@
       closeMenu();
     } else {
       sliderSwipe(1);
-      document.getElementById('slide-1').checked = true;
+      if (document.getElementById('slide-1')) {
+        document.getElementById('slide-1').checked = true;
+      }
     }
   };
   // Ловушка Tabindex
@@ -303,7 +329,7 @@
       }
     });
   }
-  //swipe
+  // swipe
   if (slider) {
     slider.addEventListener('touchstart', handleTouchStart, false);
     slider.addEventListener('touchmove', handleTouchMove, false);
@@ -312,27 +338,27 @@
   var yDown = null;
 
   function handleTouchStart(evt) {
-      xDown = evt.touches[0].clientX;
-      yDown = evt.touches[0].clientY;
-  };
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+  }
 
   function handleTouchMove(evt) {
-      if ( ! xDown || ! yDown ) {
-          return;
-      }
-      var xUp = evt.touches[0].clientX;
-      var yUp = evt.touches[0].clientY;
-      var xDiff = xDown - xUp;
-      var yDiff = yDown - yUp;
+    if (!xDown || !yDown) {
+      return;
+    }
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
 
-      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-          if ( xDiff > 0 ) {
-            sliderRight(radios);
-          } else {
-            sliderLeft(radios);
-          }
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0) {
+        sliderRight(radios);
+      } else {
+        sliderLeft(radios);
       }
-      xDown = null;
-      yDown = null;
-  };
+    }
+    xDown = null;
+    yDown = null;
+  }
 })();

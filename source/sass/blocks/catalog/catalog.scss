@@ -10,8 +10,14 @@
   display: grid;
   grid-template-columns: repeat(3, 31%);
   column-gap: 3.5%;
+  row-gap: 38px;
   padding: 0;
   width: 100%;
+  margin-bottom: 72px;
+
+  li {
+    max-height: 336px;
+  }
 }
 
 .catalog__nav {
@@ -42,6 +48,18 @@
 }
 
 @media (max-width: 1023px) {
+  .catalog__list {
+    li {
+      max-height: 272px;
+    }
+
+    img {
+      height: 206px;
+      width: 208px;
+      margin-bottom: 8px;
+    }
+  }
+
   .catalog {
     margin-top: 34px;
     width: 100%;
@@ -62,11 +80,24 @@
   .catalog__list {
     grid-template-columns: repeat(2, 45%);
     column-gap: 10%;
+    row-gap: 0;
     padding: 0;
+    margin-bottom: 17px;
+
+    li {
+      max-height: 244px;
+    }
+
+    img {
+      height: 130px;
+      width: 130px;
+      margin-bottom: 1px;
+    }
   }
 
   .catalog__nav {
-    margin-top: -1px;
+    max-width: 240px;
+    margin: -1px auto auto;
 
     ul {
       max-width: none;

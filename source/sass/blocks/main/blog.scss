@@ -1,3 +1,12 @@
+.blog {
+  margin-top: 116px;
+
+  h2 + a {
+    margin-top: 19px;
+    padding-bottom: 4px;
+  }
+}
+
 .blog__wrapper {
   margin: auto;
   max-width: 1170px;
@@ -6,11 +15,12 @@
 }
 
 .blog__list {
+  margin-top: 60px;
   padding: 0;
   display: grid;
   row-gap: 30px;
-  column-gap: 30px;
-  grid-template-columns: repeat(2, 49%);
+  column-gap: 2.5%;
+  grid-template-columns: repeat(2, 48.8%);
   grid-auto-rows: 300px;
 }
 
@@ -20,6 +30,12 @@
   justify-content: center;
 
   img {
+    width: 100%;
+    height: 100%;
+  }
+
+  picture {
+    overflow: hidden;
     width: 50%;
     height: 100%;
   }
@@ -33,9 +49,10 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      padding-bottom: 104px;
     }
 
-    img {
+    picture {
       width: 100%;
     }
   }
@@ -45,7 +62,7 @@
   }
 
   &:nth-child(2n) {
-    img {
+    picture {
       order: 1;
     }
   }
@@ -62,7 +79,7 @@
     font-size: 14px;
     line-height: 130%;
     color: $gray;
-    padding-top: 61px;
+    padding-top: 53px;
   }
 
   h3 {
@@ -85,12 +102,17 @@
     width: min-content;
     text-decoration: none;
     white-space: nowrap;
-    margin: 50px auto;
+    margin: 39px auto 0 auto;
     border-bottom: 1px solid $main-color;
+    padding-bottom: 4px;
   }
 }
 
 @media (max-width: $tablet) {
+  .blog {
+    margin-top: 66px;
+  }
+
   .blog__list {
     row-gap: 50px;
     grid-template-columns: 100%;
@@ -99,23 +121,42 @@
   .blog__item {
     max-height: 300px;
 
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
     &:nth-child(3n) {
       grid-area: initial;
       order: initial;
       position: initial;
 
+      p {
+        padding-top: 69px;
+      }
+
       div {
         position: initial;
       }
 
-      img {
+      picture {
         width: 50%;
       }
+    }
+  }
+
+  .blog__item-meta {
+    h3 {
+      width: 163px;
     }
   }
 }
 
 @media (max-width: $mobile) {
+  .blog {
+    margin-top: 75px;
+  }
+
   .blog__wrapper {
     padding-left: 15px;
     padding-right: 15px;
@@ -124,34 +165,54 @@
   .blog__list {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     gap: 40px;
+    margin-top: 51px;
+    flex-direction: column;
   }
 
   .blog__item {
     height: min-content;
     max-height: none;
+    flex-direction: column;
 
-    img {
+    picture {
       height: 50%;
+      max-height: 256px;
       width: 100%;
     }
 
     div {
       width: 100%;
       height: 50%;
+      max-height: 269px;
+      padding-bottom: 49px;
     }
 
     &:nth-child(3n) {
-      img {
+      picture {
         width: 100%;
+        max-height: 256px;
+      }
+
+      p {
+        padding-top: 47px;
+      }
+
+      div {
+        padding-bottom: 66px;
       }
     }
 
     &:nth-child(2n) {
-      img {
+      picture {
         order: -1;
       }
+    }
+  }
+
+  .blog__item-meta {
+    p {
+      padding-top: 31px;
     }
   }
 }

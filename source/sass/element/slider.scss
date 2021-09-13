@@ -1,4 +1,10 @@
+.slider {
+  position: relative;
+}
+
 .slider__navigation {
+  position: absolute;
+  top: -44px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -33,6 +39,12 @@
   max-width: 100%;
   padding: 0;
   transition: all 0.3s ease;
+  margin-top: 59px;
+
+  img {
+    height: 284px;
+    width: 100%;
+  }
 
   li {
     min-width: 23.12%;
@@ -40,10 +52,11 @@
 }
 
 .slider__radio {
+  height: min-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 14px;
 
   label:not(:nth-child(-n+3)) {
     visibility: hidden;
@@ -56,42 +69,114 @@
     width: 0;
     height: 0;
     padding: 0;
+    margin: 0;
     visibility: hidden;
 
-    &:checked + p {
+    &:checked + span {
       color: $black;
     }
   }
 
-  p {
+  span {
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
     color: $gray;
+    margin: -24px 0 0 0;
   }
 }
 
 @media (max-width: $tablet) {
+  .slider__navigation {
+    top: -48px;
+  }
+
+  .slider__navigation-btn {
+    width: 34px;
+    height: 15px;
+  }
+
   .slider__list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 2.5%;
-    max-width: 100%;
-    padding: 0;
-    transition: all 0.3s ease;
+    margin-top: 49px;
+    gap: 4%;
+    margin-bottom: 9px;
 
     li {
-      min-width: 48.5%;
+      min-width: 48%;
+    }
+
+    img {
+      height: 340px;
     }
   }
 
   .slider__radio {
+    gap: 13px;
+
     label:not(:nth-child(-n+3)) {
       visibility: visible;
       font-size: 16px;
       width: auto;
       margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .slider__list {
+    margin-top: 41px;
+    gap: 10%;
+
+    li {
+      min-width: 45%;
+    }
+
+    img {
+      height: 137px;
+    }
+  }
+
+  .slider__navigation {
+    visibility: hidden;
+  }
+
+  .slider__radio {
+    position: relative;
+    width: 12px;
+    margin: -2px auto auto;
+    padding-right: 38px;
+
+    &::after {
+      content: "of 6";
+      white-space: nowrap;
+      position: absolute;
+      word-spacing: 5px;
+      right: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      color: $black;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    input {
+      position: relative;
+
+      + span {
+        position: absolute;
+        top: 24px;
+        left: -1px;
+        color: transparent;
+      }
+
+      &:checked + span {
+        color: $black;
+      }
     }
   }
 }
