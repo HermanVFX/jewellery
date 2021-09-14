@@ -1,5 +1,5 @@
 .top {
-  width: 100vw;
+  width: 100%;
   background-color: $main-color;
   color: $white;
   font-family: "Cormorant Garamond", "Georgia", serif;
@@ -12,6 +12,7 @@
   background-size: cover;
   position: relative;
   z-index: 1;
+
 
   &::after {
     position: absolute;

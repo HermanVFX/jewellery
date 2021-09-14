@@ -23,6 +23,20 @@
   margin: 35px auto -50px;
 }
 
+label,
+input,
+button {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
 .visibility-mobile {
   height: 0;
   margin: 0;

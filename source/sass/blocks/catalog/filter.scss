@@ -140,10 +140,22 @@
 
 .filter__range-value-min {
   left: 45px;
+
+  input {
+    --webkit-appearance: none;
+    appearance: none;
+    width: max-content;
+  }
 }
 
 .filter__range-value-max {
   left: 135px;
+
+  input {
+    --webkit-appearance: none;
+    appearance: none;
+    width: max-content;
+  }
 }
 // range
 .filter__range-min,
