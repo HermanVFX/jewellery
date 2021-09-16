@@ -5,11 +5,11 @@
   var header = document.querySelector('.header');
   var body = document.querySelector('.page-body');
   // range
-  var rangeMin = document.getElementById('range-min');
-  var rangeMax = document.getElementById('range-max');
+  var rangeMin = document.querySelector('#range-min');
+  var rangeMax = document.querySelector('#range-max');
   var rangeProgress = document.querySelector('.filter__range-progress');
-  var rangeValueMin = document.getElementById('range-value-min');
-  var rangeValueMax = document.getElementById('range-value-max');
+  var rangeValueMin = document.querySelector('#range-value-min');
+  var rangeValueMax = document.querySelector('#range-value-max');
   var rangeValueMinBlock = document.querySelector('.filter__range-value-min');
   var rangeValueMaxBlock = document.querySelector('.filter__range-value-max');
   // filter
@@ -45,8 +45,8 @@
   var openPopupBtn = document.querySelector('.header__login');
   var closePopupBtn = document.querySelector('.login__close-btn');
   var popupOverlay = document.querySelector('.login__overlay');
-  var email = document.getElementById('e-mail');
-  var sendEmail = document.getElementById('popup-send');
+  var email = document.querySelector('#e-mail');
+  var sendEmail = document.querySelector('#popup-send');
   // popup login
   function closeLogin() {
     if (popup && popup.classList.contains('login--open')) {
@@ -297,8 +297,8 @@
       closeMenu();
     } else {
       sliderSwipe(1);
-      if (document.getElementById('slide-1')) {
-        document.getElementById('slide-1').checked = true;
+      if (document.querySelector('#slide-1')) {
+        document.querySelector('#slide-1').checked = true;
       }
     }
   };

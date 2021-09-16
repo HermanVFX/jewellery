@@ -25,6 +25,11 @@
   &--last {
     transform: rotate(-180deg);
   }
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
 }
 
 .slider__wrapper {
@@ -71,6 +76,11 @@
     padding: 0;
     margin: 0;
     visibility: hidden;
+
+    &:hover + span {
+      opacity: 0.7;
+      cursor: pointer;
+    }
 
     &:checked + span {
       color: $black;

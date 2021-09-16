@@ -41,7 +41,12 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
-    color: #1d1613;
+    color: $black;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
   }
 
   p {
@@ -61,7 +66,7 @@
       opacity: 1;
       font-size: 16px;
       line-height: 130%;
-      color: #1d1613;
+      color: $black;
       max-width: 527px;
       width: 90%;
       margin: -37px auto 43px 50px;

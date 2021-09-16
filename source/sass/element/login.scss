@@ -16,6 +16,14 @@
     opacity: 1;
     visibility: visible;
   }
+
+  &--no-js {
+    position: inherit;
+    width: auto;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .login__overlay {
@@ -62,6 +70,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .login__head {
@@ -88,6 +101,10 @@
     border-right: 0;
     padding-bottom: 9px;
 
+    &:hover {
+      opacity: 0.7;
+    }
+
     + a {
       margin-top: -29px;
       margin-bottom: 45px;
@@ -100,6 +117,10 @@
       width: 100%;
       display: block;
     }
+
+    + a:hover {
+      opacity: 0.7;
+    }
   }
 
   button {
@@ -111,6 +132,11 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
   }
 }
 
@@ -126,14 +152,18 @@
     color: $black;
     margin-left: 7px;
     text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
 @media (max-width: $mobile) {
   .login__block {
     margin-top: 50px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
     width: 270px;
     background-size: 100% 84px;
     padding-top: 97px;

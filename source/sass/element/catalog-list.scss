@@ -10,6 +10,10 @@
     display: block;
     text-decoration: none;
     color: $black-footer;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   h3 {
@@ -24,6 +28,10 @@
     font-size: 14px;
     line-height: 130%;
     margin: 6px auto 36px auto;
+  }
+
+  img {
+    object-fit: cover;
   }
 }
 

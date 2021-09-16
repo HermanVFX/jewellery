@@ -12,6 +12,10 @@
     align-items: center;
     color: $white;
     text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -63,6 +67,10 @@
 
   label {
     position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   button {
@@ -76,6 +84,7 @@
     background-color: transparent;
     border: none;
     padding-right: 41px;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -85,6 +94,10 @@
       background-image: url("../img/right-white.svg");
       right: -5px;
       top: 6px;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
@@ -132,6 +145,10 @@
 
   &--twitter {
     list-style: url("../img/icon-twitter-white.svg");
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 

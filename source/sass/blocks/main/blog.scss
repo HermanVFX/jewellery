@@ -105,6 +105,10 @@
     margin: 39px auto 0 auto;
     border-bottom: 1px solid $main-color;
     padding-bottom: 4px;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
