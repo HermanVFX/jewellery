@@ -1,5 +1,5 @@
 .blog {
-  margin-top: 116px;
+  margin-top: 113px;
 
   h2 + a {
     margin-top: 19px;
@@ -21,26 +21,28 @@
   row-gap: 30px;
   column-gap: 2.5%;
   grid-template-columns: repeat(2, 48.8%);
-  grid-auto-rows: 300px;
+  grid-template-rows: min-content;
 }
 
 .blog__item {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
+  height: min-content;
 
   picture {
-    overflow: hidden;
     width: 50%;
-    height: 100%;
   }
 
-  &:nth-child(3n) {
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &--big {
+    height: auto;
     grid-area: 2 span;
     order: -1;
     position: relative;
@@ -49,7 +51,8 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      padding-bottom: 104px;
+      padding-bottom: 16.5%;
+      height: auto;
     }
 
     picture {
@@ -79,7 +82,8 @@
     font-size: 14px;
     line-height: 130%;
     color: $gray;
-    padding-top: 53px;
+    margin-top: 23%;
+    margin-bottom: 5%;
   }
 
   h3 {
@@ -89,7 +93,8 @@
     font-size: 26px;
     line-height: 130%;
     color: $black-footer;
-    width: 60%;
+    width: 100%;
+    max-width: 163px;
     margin: auto;
   }
 
@@ -102,7 +107,7 @@
     width: min-content;
     text-decoration: none;
     white-space: nowrap;
-    margin: 39px auto 0 auto;
+    margin: 14% auto 4% auto;
     border-bottom: 1px solid $main-color;
     padding-bottom: 4px;
 
@@ -114,12 +119,16 @@
 
 @media (max-width: $tablet) {
   .blog {
-    margin-top: 66px;
+    margin-top: 61px;
   }
 
   .blog__list {
     row-gap: 50px;
     grid-template-columns: 100%;
+    max-width: 678px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .blog__item {
@@ -130,16 +139,17 @@
       height: 100%;
     }
 
-    &:nth-child(3n) {
+    &--big {
       grid-area: initial;
       order: initial;
       position: initial;
 
       p {
-        padding-top: 69px;
+        padding-top: 17px;
       }
 
       div {
+        padding-bottom: 0;
         position: initial;
       }
 
@@ -152,6 +162,15 @@
   .blog__item-meta {
     h3 {
       width: 163px;
+    }
+
+    p {
+      margin-top: 68px;
+      margin-bottom: 14px;
+    }
+
+    a {
+      margin-top: 38px;
     }
   }
 }
@@ -185,25 +204,29 @@
       width: 100%;
     }
 
+    img {
+      max-height: 265px;
+    }
+
     div {
       width: 100%;
       height: 50%;
       max-height: 269px;
-      padding-bottom: 49px;
+      padding-bottom: 38px;
     }
 
-    &:nth-child(3n) {
+    &--big {
       picture {
         width: 100%;
         max-height: 256px;
       }
 
       p {
-        padding-top: 47px;
+        padding-top: 15px;
       }
 
       div {
-        padding-bottom: 66px;
+        padding-bottom: 54px;
       }
     }
 
@@ -216,7 +239,7 @@
 
   .blog__item-meta {
     p {
-      padding-top: 31px;
+      margin-top: 46px;
     }
   }
 }

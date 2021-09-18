@@ -101,14 +101,20 @@
     row-gap: 0;
     padding: 0;
     margin-bottom: 17px;
+    margin-top: 11px;
 
     li {
-      max-height: 244px;
+      max-height: none;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+        margin-left: auto;
+      }
     }
 
     img {
-      height: 130px;
-      width: 130px;
+      height: auto;
+      width: 100%;
       margin-bottom: 1px;
     }
   }

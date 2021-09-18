@@ -157,21 +157,23 @@
 
 .filter__range-value-min {
   left: 45px;
+  pointer-events: none;
 
   input {
-    --webkit-appearance: none;
-    appearance: none;
     width: max-content;
+    max-width: 60px;
+    background-color: transparent;
   }
 }
 
 .filter__range-value-max {
   left: 135px;
+  pointer-events: none;
 
   input {
-    --webkit-appearance: none;
-    appearance: none;
     width: max-content;
+    max-width: 60px;
+    background-color: transparent;
   }
 }
 // range

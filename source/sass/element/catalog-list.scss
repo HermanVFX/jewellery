@@ -31,7 +31,8 @@
   }
 
   img {
-    object-fit: cover;
+    object-fit: contain;
+    height: auto;
   }
 }
 

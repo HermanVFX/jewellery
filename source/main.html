@@ -25,7 +25,7 @@
           <div class="header__top-wrapper">
             <div class="header__search">
               <label for="main-search">
-                <input type="text" id="main-search" placeholder="Type here to search">
+                <input type="search" id="main-search" placeholder="Type here to search">
               </label>
             </div>
             <a href="#" class="header__logo">
@@ -325,7 +325,7 @@
               </div>
             </li>
 
-            <li class="blog__item">
+            <li class="blog__item blog__item--big">
               <picture>
                 <!-- 1х: 630px; 2x: 1260px -->
                 <source media="(max-width: 1023px)" srcset="img/blog/blog-img-3-tablet.webp, img/blog/blog-img-3-tablet-x2.webp 2x" type="image/webp">
@@ -464,6 +464,16 @@
           </div>
         </div>
       </div>
+
+      <!-- popup-conform -->
+
+      <div class="conform">
+        <div class="conform__overlay"></div>
+        <div class="conform__block">
+          <p>Conform</p>
+          <button type="button" class="conform__close-btn">Close</button>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
@@ -478,7 +488,7 @@
             <label for="footer-email">
               <input type="email" id="footer-email" placeholder="Your E-mail">
             </label>
-            <button type="submit">Sign Up</button>
+            <button id="footer-btn" type="submit">Sign Up</button>
           </div>
 
         </div>

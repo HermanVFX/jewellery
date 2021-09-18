@@ -18,6 +18,11 @@
 @import "element/section-head.scss";
 @import "element/slider.scss";
 @import "element/login.scss";
+@import "element/conform.scss";
+
+.error-email {
+  outline: 4px solid $error;
+}
 
 .logo {
   margin: 35px auto -50px;

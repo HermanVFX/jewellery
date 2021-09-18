@@ -47,18 +47,74 @@
   var popupOverlay = document.querySelector('.login__overlay');
   var email = document.querySelector('#e-mail');
   var sendEmail = document.querySelector('#popup-send');
-  // popup login
-  function closeLogin() {
-    if (popup && popup.classList.contains('login--open')) {
-      popup.classList.remove('login--open');
+  // popup conform
+  var conformBlock = document.querySelector('.conform');
+  var conformCloseBtn = document.querySelector('.conform__close-btn');
+  // footer email
+  var footerEmail = document.querySelector('#footer-email');
+  var footerBtn = document.querySelector('#footer-btn');
+  // footer email
+  if (footerBtn && footerEmail) {
+    footerBtn.addEventListener('click', function () {
+      if (footerEmail.value.length > 0) {
+        localStorage.setItem('email-footer', footerEmail.value);
+        openConform();
+      } else {
+        footerEmail.classList.add('error-email');
+        setTimeout(function () {
+          if (footerEmail.classList.contains('error-email')) {
+            footerEmail.classList.remove('error-email');
+          }
+        }, 2500);
+      }
+    });
+  }
+  // popup conform
+  function openConform() {
+    if (conformBlock && body) {
+      if (!conformBlock.classList.contains('conform--open')) {
+        conformBlock.classList.add('conform--open');
+        body.classList.add('overflow');
+      }
     }
   }
-  if (email && popupOverlay && popup && openPopupBtn && closePopupBtn) {
+
+  function closeConform() {
+    if (conformBlock && body) {
+      if (conformBlock.classList.contains('conform--open')) {
+        conformBlock.classList.remove('conform--open');
+        body.classList.remove('overflow');
+      }
+    }
+  }
+
+  if (conformCloseBtn) {
+    conformCloseBtn.addEventListener('click', closeConform);
+  }
+  // popup login
+  function closeLogin() {
+    if (body && body.classList.contains('overflow') && popup && popup.classList.contains('login--open')) {
+      popup.classList.remove('login--open');
+      body.classList.remove('overflow');
+    }
+  }
+  function errorPopup() {
+    if (email) {
+      email.classList.add('error-email');
+      setTimeout(function () {
+        if (email.classList.contains('error-email')) {
+          email.classList.remove('error-email');
+        }
+      }, 2500);
+    }
+  }
+  if (email && popupOverlay && popup && body && openPopupBtn && closePopupBtn) {
     closePopupBtn.addEventListener('click', closeLogin);
     popupOverlay.addEventListener('click', closeLogin);
     openPopupBtn.addEventListener('click', function (event) {
       if (!popup.classList.contains('login--open')) {
         popup.classList.add('login--open');
+        body.classList.add('overflow');
         setTimeout(function () {
           if (popup.classList.contains('login--open')) {
             email.focus();
@@ -71,8 +127,13 @@
       return event;
     });
     sendEmail.addEventListener('click', function () {
-      localStorage.setItem('email', email.value);
-      closeLogin();
+      if (email.value.length > 0) {
+        localStorage.setItem('email', email.value);
+        closeLogin();
+        openConform();
+      } else {
+        errorPopup();
+      }
     });
   }
   // accordeon faq

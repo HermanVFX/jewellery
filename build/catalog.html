@@ -25,7 +25,7 @@
           <div class="header__top-wrapper">
             <div class="header__search">
               <label for="main-search">
-                <input type="text" id="main-search" placeholder="Type here to search">
+                <input type="search" id="main-search" placeholder="Type here to search">
               </label>
             </div>
             <a href="#" class="header__logo">
@@ -179,11 +179,11 @@
                               <div class="filter__range-value">
                                   <label class="filter__range-value-min" for="range-value-min">
                                       <span>$</span>
-                                      <input type="number" value="55" min="0" max="200" id="range-value-min">
+                                      <input type="text" value="55" min="0" max="200" id="range-value-min" tabindex="-1">
                                   </label>
                                   <label class="filter__range-value-max" for="range-value-max">
                                       <span>$</span>
-                                      <input type="number" value="55" min="0" max="200" id="range-value-max">
+                                      <input type="text" value="55" min="0" max="200" id="range-value-max" tabindex="-1">
                                   </label>
                               </div>
                             </div>
@@ -381,6 +381,16 @@
           </div>
         </div>
       </div>
+
+      <!-- popup-conform -->
+
+      <div class="conform">
+        <div class="conform__overlay"></div>
+        <div class="conform__block">
+          <p>Conform</p>
+          <button type="button" class="conform__close-btn">Close</button>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
@@ -395,7 +405,7 @@
             <label for="footer-email">
               <input type="email" id="footer-email" placeholder="Your E-mail">
             </label>
-            <button type="submit">Sign Up</button>
+            <button id="footer-btn" type="submit">Sign Up</button>
           </div>
 
         </div>

@@ -40,7 +40,6 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  gap: 2.5%;
   max-width: 100%;
   padding: 0;
   transition: all 0.3s ease;
@@ -53,6 +52,10 @@
 
   li {
     min-width: 23.12%;
+
+    &:not(:first-child) {
+      margin-left: 2.5%;
+    }
   }
 }
 
@@ -61,13 +64,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  padding-left: 23px;
 
-  label:not(:nth-child(-n+3)) {
-    visibility: hidden;
-    font-size: 0;
-    width: 0;
-    margin-left: -15px;
+  label {
+    &:not(:first-child) {
+      margin-left: 9px;
+    }
+
+    &:not(:nth-child(-n+3)) {
+      visibility: hidden;
+      font-size: 0;
+      width: 0;
+    }
   }
 
   input {
@@ -108,11 +116,14 @@
 
   .slider__list {
     margin-top: 49px;
-    gap: 4%;
     margin-bottom: 9px;
 
     li {
       min-width: 48%;
+
+      &:not(:first-child) {
+        margin-left: 4%;
+      }
     }
 
     img {
@@ -121,13 +132,19 @@
   }
 
   .slider__radio {
-    gap: 13px;
+    padding: 0;
 
-    label:not(:nth-child(-n+3)) {
-      visibility: visible;
-      font-size: 16px;
-      width: auto;
-      margin-left: 0;
+    label {
+      &:not(:nth-child(-n+3)) {
+        visibility: visible;
+        font-size: 16px;
+        width: auto;
+        margin-left: 0;
+      }
+
+      &:not(:first-child) {
+        margin-left: 9px;
+      }
     }
   }
 }
@@ -135,14 +152,17 @@
 @media (max-width: $mobile) {
   .slider__list {
     margin-top: 41px;
-    gap: 10%;
 
     li {
       min-width: 45%;
+
+      &:not(:first-child) {
+        margin-left: 10%;
+      }
     }
 
     img {
-      height: 137px;
+      height: auto;
     }
   }
 
@@ -172,6 +192,10 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
     }
 
     input {
