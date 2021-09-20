@@ -46,6 +46,7 @@
   var closePopupBtn = document.querySelector('.login__close-btn');
   var popupOverlay = document.querySelector('.login__overlay');
   var email = document.querySelector('#e-mail');
+  var password = document.querySelector('#password');
   var sendEmail = document.querySelector('#popup-send');
   // popup conform
   var conformBlock = document.querySelector('.conform');
@@ -53,10 +54,19 @@
   // footer email
   var footerEmail = document.querySelector('#footer-email');
   var footerBtn = document.querySelector('#footer-btn');
+  // validation email
+  function validate(elem) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (reg.test(elem) == false) {
+       return false;
+    } else {
+      return true;
+    }
+ }
   // footer email
   if (footerBtn && footerEmail) {
     footerBtn.addEventListener('click', function () {
-      if (footerEmail.value.length > 0) {
+      if (footerEmail.value.length > 0 && validate(footerEmail.value)) {
         localStorage.setItem('email-footer', footerEmail.value);
         openConform();
       } else {
@@ -98,17 +108,17 @@
       body.classList.remove('overflow');
     }
   }
-  function errorPopup() {
-    if (email) {
-      email.classList.add('error-email');
+  function errorPopup(elem) {
+    if (elem) {
+      elem.classList.add('error-email');
       setTimeout(function () {
-        if (email.classList.contains('error-email')) {
-          email.classList.remove('error-email');
+        if (elem.classList.contains('error-email')) {
+          elem.classList.remove('error-email');
         }
       }, 2500);
     }
   }
-  if (email && popupOverlay && popup && body && openPopupBtn && closePopupBtn) {
+  if (email && password && popupOverlay && popup && body && openPopupBtn && closePopupBtn) {
     closePopupBtn.addEventListener('click', closeLogin);
     popupOverlay.addEventListener('click', closeLogin);
     openPopupBtn.addEventListener('click', function (event) {
@@ -127,12 +137,22 @@
       return event;
     });
     sendEmail.addEventListener('click', function () {
-      if (email.value.length > 0) {
+      if (email.value.length > 0
+        && validate(email.value) &&
+        password.value.length > 0) {
         localStorage.setItem('email', email.value);
         closeLogin();
         openConform();
-      } else {
-        errorPopup();
+      } else  {
+        if (email.value.length === 0) {
+          errorPopup(email);
+        }
+        if (!validate(email.value)) {
+          errorPopup(email);
+        }
+        if (password.value.length === 0) {
+          errorPopup(password);
+        }
       }
     });
   }

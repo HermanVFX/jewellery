@@ -25,15 +25,19 @@
   margin-top: 60px;
   display: grid;
   grid-template-columns: 19.7% 34% 19.7% 19.7%;
-  grid-auto-rows: 230px 150px;
-  row-gap: 9%;
-  column-gap: 27px;
+  grid-auto-rows: 55% 37%;
+  row-gap: 8%;
+  column-gap: 2.3%;
   padding: 0;
   max-width: 100%;
 
   .gallery__item {
     &--big {
       grid-area: 2 span;
+    }
+
+    &--big img {
+      object-fit: cover;
     }
   }
 
@@ -44,8 +48,8 @@
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -102,6 +106,7 @@
     width: 100%;
     margin: 45px auto auto;
     max-height: 361px;
+    max-width: 290px;
     overflow: hidden;
 
     .gallery__item {
